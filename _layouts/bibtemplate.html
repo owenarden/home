@@ -23,7 +23,10 @@ pre{
 
 
 <div class="text-justify">
-{{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' | replace_first: 'Bryngelson SH', '<b>Bryngelson SH</b>' | replace_first: 'Bryngelson S', '<b>Bryngelson S</b>'}}</div>
+<h5 >{{ entry.title }}</h5>
+<h6>{{ entry.series}}</h6>
+{{entry.author | replace_first: 'Arden, Owen', '<b>Arden, Owen</b>' }}
+</div>
 
 {% assign bibtest = false %}
 {% if entry.file %}
@@ -36,18 +39,18 @@ pre{
 {% endif %}
 
 {% if bibtest %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
+<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
 {% endif %}
 
 {% if entry.doi %}
 {% if entry.type == 'unpublished' %}
 <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
 {% else %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
+<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
 {% endif %}
 {% endif %}
 
-{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
+{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'techreport' %}
 <button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()">BIB</button>
 {% endif %}
 
@@ -55,18 +58,12 @@ pre{
 <button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
 {% endif %}
 
-{% if entry.abstract %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex | remove: "entry.abstract" }}</pre>
+<div id="a{{entry.key}}" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>{{ entry.bibtex | remove:"file = entry.file"}}</pre>
 </div>
-{% else %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex }}</pre>
-</div>
-{% endif %}
 
-<div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{entry.abstract}}</pre>
+<div id="b{{entry.key}}" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>{{entry.abstract}}</p>
 </div>
 
 <script>

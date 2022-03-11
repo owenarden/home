@@ -14,13 +14,17 @@ img {
   border-bottom: 4px solid var(--secondary);
 }
 
+.navbar .nav-link {
+  font-size: 16px;
+}
+
 .btn {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .container-fluid {
-  max-width: 800px;
+  max-width: 1280px;
 }
 
 .container-footer {
@@ -71,16 +75,4 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-  // margin-left:7px;
-  // border: 1px solid red;
-
-.embed-container-spleen {
-  height: 155px;
-  background-image: url($baseurl + "/images/thumbs/spleen.jpg");
-}
-
-.embed-container-leuk {
-  height: 112px;
-  background-image: url($baseurl + "/images/thumbs/spleen.jpg");
 }

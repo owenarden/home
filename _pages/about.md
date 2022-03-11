@@ -56,9 +56,34 @@ permalink: /about/
   <li> {{ member.education5 | replace: "-","&#8211;"}} </li>
   <li> {{ member.education6 | replace: "-","&#8211;"}} </li>
   {% endif %}
+  {% if member.number_educ == 7 %}
+  <li> {{ member.education1 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education2 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education3 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education4 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education5 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education6 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education7 | replace: "-","&#8211;"}} </li>
+  {% endif %}
+  {% if member.number_educ == 8 %}
+  <li> {{ member.education1 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education2 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education3 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education4 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education5 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education6 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education7 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education8 | replace: "-","&#8211;"}} </li>
+  {% endif %}
   </ul>
 </div>
 </div>
+</div>
+{% if member.shortbio %}
+<div class="jumbotron">
+### Bio
+{{ member.shortbio}}
+{% endif %}
 </div>
 {% endfor %}
 
@@ -83,35 +108,3 @@ permalink: /about/
 </ul>
 </div>
 {% endif %}
-
-
-{% if site.data.people %}
-<div class="jumbotron">
-### Students and mentoring
-<ul>
-{% for student in site.data.people %}
- <li> {{ student.name }}, {{student.location}} ({{student.degree}}, {{student.year}}) </li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
-
-
-{% if site.data.collaborators %}
-<div class="jumbotron">
-### Collaborators
-<ul>
-{% for collab in site.data.collaborators %}
- <li> <a href="{{collab.url}}" target="_blank">{{collab.name}}</a> ({{collab.title}})</li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
-
-
-<div class="jumbotron">
-  <h4>Sponsors</h4>
-  <div style='display:block; text-align:center; margin-left:auto; margin-right:auto;'>
- {% for funder in site.data.funders %}<a href="{{ funder.url }}" target="_blank"><img src='{{ site.url }}{{ site.baseurl }}/images/logopic/{{ funder.image }}' style='max-height: 80px; max-width: 200px; margin: 1%'/></a>{% endfor %}
-  </div>
-</div>
