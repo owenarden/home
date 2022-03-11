@@ -4909,7 +4909,7 @@ img { border-radius: 5%; }
 
 .well-collapse blockquote { border-color: var(--gray-dark); border-color: rgba(0, 0, 0, 0.15); }
 
-.embed-container-home { position: relative; padding: 0px; margin: 0px; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url("/images/thumbs/3dtrain.jpeg"); }
+.embed-container-home { position: relative; padding: 0px; margin: 0px; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url("https://owenarden.github.io//home/images/thumbs/3dtrain.jpeg"); }
 
 .embed-container { position: relative; padding: 0px; margin: 0px; width: 175px; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; }
 
