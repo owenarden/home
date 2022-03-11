@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Home TEST"
 layout: homelay
 sitemap: false
 permalink: /
