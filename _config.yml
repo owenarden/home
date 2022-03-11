@@ -2,8 +2,8 @@
 title: Owen Arden
 email: owen@soe.ucsc.edu
 description: Owen Arden's Academic Home Page
-baseurl: ""
-url: ""
+baseurl: "/home" # the subpath of your site, e.g. /blog/
+url: "https://owenarden.github.io/" # the base hostname & protocol for your site
 
 # Google analytics ID: Remove or use your own!
 # google_analytics: UA-167467135-1
