@@ -1,5 +1,5 @@
 ---
-title: "Home TEST"
+title: "Owen Arden"
 layout: homelay
 sitemap: false
 permalink: /
