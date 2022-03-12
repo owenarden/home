@@ -21,3 +21,11 @@
   blurb: Flow-limited authorization for Haskell
   status: completed
   url: /home/projects/flame
+- title: Jif
+  blurb: Information flow control for Java
+  status: completed
+  url: https://www.cs.cornell.edu/jif/
+- title: Polyglot
+  blurb: An extensible Java compiler framework
+  status: completed
+  url: https://www.cs.cornell.edu/projects/polyglot/
