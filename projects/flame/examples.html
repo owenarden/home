@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flame Examples - Owen Arden</title>
+  <meta name="description" content="Owen Arden's Academic Home Page">
+  <link rel="stylesheet" href="https://owenarden.github.io//home/assets/main.css" }}">
+  <link rel="canonical" href="https://owenarden.github.io//home/projects/flame/examples">
+  <!-- <link rel="shortcut icon" type ="image/x-icon" href="https://owenarden.github.io//home/favicon.ico"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+<!-- End Google Tag Manager -->
+
+
+
+</head>
+
+
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> -->
+    <a class="navbar-brand" href="https://owenarden.github.io//home/">
+     <!-- <img src="https://owenarden.github.io//home/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt=""> -->
+      Owen Arden
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="https://owenarden.github.io//home/">Home</a>
+          </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io//home/about">About</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io//home/publications">Publications</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io//home/teaching">Teaching</a>
+           </li> 
+          
+        </ul>
+  </div>
+</nav>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="gridid" class="col-sm-12 col-xs-12">
+  <p>We maintain a repository of useful and illustrative examples of the Flame applications in the repo 
+       <a href="https://bitbucket.org/decenters/flame-examples">flame-examples</a></p>
+
+<h2 id="information-flow-control-for-rest-style-web-applications">Information Flow Control for REST-style Web Applications</h2>
+
+<p>Web applications often store data for multiple users in
+  a single data structure. While convenient, implementation
+  errors could lead to information leaks.  Labeling each
+  user’s data with information flow policies and enforcing
+  information flow control with Flame eliminates such errors
+  by construction.  We took an existing <a href="https://github.com/krdlab/examples/tree/master/haskell-servant-webapp">
+  Servant REST webapp</a> for storing and retrieving memos,
+  added support for multiple users, and enforced information
+  flow control to ensure only the user possessing a secret key
+  may create, read, or delete the associated memos.
+  &lt;/p&gt;</p>
+
+<p>
+  Instructions:
+&lt;pre&gt;
+  &gt; git clone https://bitbucket.org/decenters/flame-examples
+  &gt; cd flame-examples/memodb
+  &gt; stack build :memodb-server
+  &gt; stack exec memodb-server
+&lt;/pre&gt;
+	  Then, from the command line, use curl to interact with the REST api:
+&lt;pre style="white-space:pre-wrap; word-wrap:break-word;"&gt;
+  &gt; curl http://localhost:8080/memos
+  Missing auth header
+  &gt; curl -H “servant-auth-cookie:key1” \
+         -H “Content-type: application/json” \
+         -d ‘{“memo”:”Flame rocks!” }’ http://localhost:8080/memos
+  &gt; curl -H “servant-auth-cookie:key1” http://localhost:8080/memos
+  [{“createdAt”:”2017-09-14T19:24:17.720088Z”,”text”:”Flame rocks!”,”id”:1}]
+&lt;/pre&gt;
+	  </p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;
+  You can also use a sample webage that embeds Javascript that uses this API. First, browse to &lt;a href="http://localhost:8080"&gt;&lt;tt&gt;http://localhost:8080&lt;/tt&gt;&lt;/a&gt;.
+  Entering a valid secret key (try &lt;tt&gt;key1&lt;/tt&gt;, &lt;tt&gt;key2&lt;/tt&gt;, or &lt;tt&gt;key3&lt;/tt&gt;) will list the memos for that user allow you to enter new ones.
+      &lt;center&gt;&lt;image src="images/memodb.png"/&gt;&lt;/center&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Finally, you can try a Flame-enabled Servant client:
+</code></pre></div></div>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  &gt; stack build :memodb-client
+  &gt; stack exec memodb-client
+  GET key1 before POST: []
+  GET key1 after POST: [Memo {id = 1, text = "Try Flame and Servant!", createdAt = 2017-09-14 21:07:31.325636 UTC}]
+</pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      A big advantage of this approach is that
+      &lt;code&gt;memodb-client&lt;/code&gt; and &lt;code&gt;memodb-server&lt;/code&gt;
+      link against the same API specification, ensuring that the same
+      security policies are enforced on the client and the server.
+    &lt;/p&gt; 
+    &lt;h1 id="nmifc"&gt;Nonmalleable Information Flow Control for Basic Authentication&lt;/h1&gt;
+     
+  &lt;p&gt;&lt;a href="/publications/2017-10-02-nmifc.html"&gt;Nonmalleable information flow control&lt;/a&gt; (NMIFC)
+         enforces security for programs that &lt;em&gt;downgrade&lt;/em&gt; confidentiality and integrity policies. 
+         Like robust declassification, nonmalleability prevents attackers from controlling what information
+         is declassified by a program.  NMIFC goes further to prevent attackers from leveraging endorsements
+         to influence declassifications or manipulate confidential data.  &lt;/p&gt;
+     
+      &lt;p&gt; NMIFC is useful for authentication mechanisms since they inherently require endorsement and declassification: 
+         the result of an authentication attempt is public and trustworthy, despite having a secret dependency (the password or other secret authentication data) and an
+         untrustworthy dependency (the password guess). 
+      &lt;/p&gt;
+      &lt;p&gt; To demonstrate how Flame can be used to enforce NMIFC for authentication mechanisms, we have 
+          implemented a &lt;a href="https://www.ietf.org/rfc/rfc2617.txt"&gt;Basic Authentication&lt;/a&gt;
+          module for the Servant web application framework. We used this module to provide a new authentication to our
+          &lt;a href="#ifcapps"&gt;multi-user memo app&lt;/a&gt;.
+          &lt;center&gt;&lt;image src="images/nmauthdemo.png"/&gt;&lt;/center&gt;
+      &lt;/p&gt;
+  &lt;p&gt;
+  Instructions:
+</code></pre></div></div>
+<pre>
+  git clone https://bitbucket.org/decenters/flame-examples
+  cd flame-examples/memodb
+  stack build :nmauthdemo
+  stack exec nmauthdemo
+</pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Then, browse to &lt;a href="http://localhost:8080"&gt;&lt;tt&gt;http://localhost:8080&lt;/tt&gt;&lt;/a&gt;. You can use username "alice" and password "12345" to log in.
+      &lt;em&gt;Hint: your browser may cache your authentication credentials, so try opening the page in a private browsing session if you want to try logging in multiple times.&lt;/em&gt;
+  &lt;/p&gt;
+    &lt;h1 id="macaroons"&gt;Flow-safe Decentralized Authorization with Macaroons&lt;/h1&gt;
+      &lt;p&gt;&lt;a href="https://research.google.com/pubs/pub41892.html"&gt;Macaroons&lt;/a&gt; are authentication tokens like cookies, but may contain more sophisticated 
+         &lt;em&gt;caveats&lt;/em&gt; that constrain the authority of the token to access resources or perform actions. 
+      &lt;/p&gt;
+      &lt;p&gt;
+  Instructions:
+</code></pre></div></div>
+<pre>
+  &gt; git clone https://bitbucket.org/decenters/flame-examples
+  &gt; cd flame-examples/memodb-macaroons
+  &gt; stack build :memodb-macaroons
+  &gt; stack exec memodb-macaroons
+  alice's macaroon:MDAxM2xvY2F0...
+</pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Then, from the command line, use curl to interact with the REST api:
+</code></pre></div></div>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  &gt; curl http://localhost:8080/memos
+  Missing auth header
+  &gt; curl -H "servant-auth-macaroon:MDAxM2xvY2F0..." \
+         -H "Content-type: application/json" \
+         -d '{"memo":"Flame rocks!" }' http://localhost:8080/memos
+  &gt; curl -H "servant-auth-macaroon:MDAxM2xvY2F0..." http://localhost:8080/memos
+  [{"createdAt":"2017-09-14T19:24:17.720088Z","text":"Flame rocks!","id":1}]
+</pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;/p&gt;
+
+    &lt;/div&gt; &lt;!-- intro --&gt;
+  &lt;/div&gt;
+</code></pre></div></div>
+<p>&lt;/div&gt;
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-32820411-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());</script></p>
+
+<p>gtag(‘config’, ‘UA-32820411-2’);
+&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <br/>
+<section id="footer">
+<div class="container-footer">
+  <div class="panel-footer">
+	  <div class="row">
+		<div class="col-sm-4">
+		    <h5>About</h5>	
+            <p>Prof. Owen Arden<br/> Assistant Professor<br/> <a href="https://engineering.ucsc.edu/departments/computer-science-and-engineering" target="_blank">Computer Science and Engineering</a><br/> UC Santa Cruz
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Contact</h5>	
+            <p><a href="mailto:owen@soe.ucsc.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Owen via email</a> <br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Coordinates</h5>	
+            <p><a href="https://engineering.ucsc.edu/about/locations/baskin-engineering-building" target="_blank">Engineering 2</a><br/> UC Santa Cruz<br/> MS: SOE3<br/> 1156 High Street<br/> Santa Cruz, CA 95062
+</p>
+		</div>
+	  </div>
+
+      <center><p>&copy 2022 Owen Arden </p></center>
+	</div>
+  </div>
+</div>
+
+<script src="/home/assets/javascript/bootstrap/jquery.min.js"></script>
+<!-- <script src="/home/assets/javascript/popper/dist/umd/popper.min.js"></script> -->
+<script src="/home/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<!-- <script src="/home/assets/javascript/shb.js"></script> -->
+
+
+
+  </body>
+
+</html>

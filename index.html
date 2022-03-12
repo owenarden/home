@@ -150,6 +150,8 @@ Zheng, Haofan and Tran, Tuan and <b>Arden, Owen</b>
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstracthaofan2021eclipse()">ABSTRACT</button>
+
 
 <div id="ahaofan2021eclipse" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{haofan2021eclipse,
@@ -167,7 +169,17 @@ Zheng, Haofan and Tran, Tuan and <b>Arden, Owen</b>
 </div>
 
 <div id="bhaofan2021eclipse" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Enclave applications that rely on blockchains for integrity
+                    and availability are vulnerable to eclipse attacks. In this paper, we present
+                    an approach for reliably detecting extended eclipse attacks, even when the
+                    adversary controls all network connectivity. By monitoring changes to the
+                    difﬁculty parameter in Proof-of-Work (PoW) protocols, our algorithm detects
+                    suppression of new blocks, as well as difﬁculty-lowering attacks that attempt
+                    to force an enclave client onto a malicious fork mined solely by an attacker.
+                    We present analysis that attackers have negligible probability of evading our
+                    block monitoring algorithm, and demonstrate its robustness to most historical
+                    ﬂuctuations in difﬁculty on the Ethereum blockchain, resulting in a very low
+                    false-positive rate.</p>
 </div>
 
 <script>
@@ -233,6 +245,8 @@ Zheng, Haofan and <b>Arden, Owen</b>
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractdecent()">ABSTRACT</button>
+
 
 <div id="adecent" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{decent,
@@ -251,7 +265,30 @@ Zheng, Haofan and <b>Arden, Owen</b>
 </div>
 
 <div id="bdecent" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Remote attestation (RA) authenticates code running in
+                    trusted execution environments (TEEs), allowing trusted code to be deployed
+                    even on untrusted hosts. However, trust relationships established by one
+                    component in a distributed application may impact the security of other
+                    components, making it difficult to reason about the security of the application
+                    as a whole. Furthermore, traditional RA approaches interact badly with modern
+                    web service design, which tends to employ small interacting microservices,
+                    short session lifetimes, and little or no state.
+                    
+                    This paper presents the Decent Application Platform, a framework for building
+                    secure decentralized applications. Decent applications authenticate and
+                    authorize distributed enclave components using a protocol based on
+                    self-attestation certificates, a reusable credential based on RA and verifiable
+                    by a third party. Components mutually authenticate each other not only based on
+                    their code, but also based on the other components they trust, ensuring that no
+                    transitively-connected components receive unauthorized information. While some
+                    other TEE frameworks support mutual authentication in some form, Decent is the
+                    only system that supports mutual authentication without requiring an additional
+                    trusted third party besides the trusted hardware’s manufacturer. We have
+                    verified the secrecy and authenticity of Decent application data in ProVerif,
+                    and implemented two applications to evaluate Decent’s expressiveness and
+                    performance: DecentRide, a ride-sharing service, and DecentHT, a distributed
+                    hash table. On the YCSB benchmark, we show that DecentHT achieves 7.5x higher
+                    throughput and 3.67x lower latency compared to a non-Decent implementation.</p>
 </div>
 
 <script>
@@ -317,6 +354,8 @@ Castellanos, John H. and Ochoa, Martin and Cardenas, Alvaro A. and <b>Arden, Owe
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractraid21()">ABSTRACT</button>
+
 
 <div id="araid21" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{raid21,
@@ -334,7 +373,18 @@ Castellanos, John H. and Ochoa, Martin and Cardenas, Alvaro A. and <b>Arden, Owe
 </div>
 
 <div id="braid21" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>To protect an Industrial Control System (ICS), defenders
+                    need to identify potential attacks on the system and then design mechanisms to
+                    prevent them. Unfortunately, identifying potential attack conditions is a
+                    time-consuming and error-prone process. In this work, we propose and evaluate a
+                    set of tools to symbolically analyse the software of Programmable Logic
+                    Controllers (PLCs) guided by an information flow analysis that takes into
+                    account PLC network communication (compositions). Our tools systematically
+                    analyse malicious network packets that may force the PLC to send specific
+                    control commands to actuators. We evaluate our approach in a real-world system
+                    controlling the dosing of chemicals for water treatment. Our tools are able to
+                    find 75 attack tactics (56 were novel attacks), and we confirm that 96% of
+                    these tactics cause the intended effect in our testbed.</p>
 </div>
 
 <script>
@@ -398,6 +448,8 @@ pre{
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractjflac()">ABSTRACT</button>
+
 
 <div id="ajflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@techreport{jflac,
@@ -411,7 +463,28 @@ pre{
 </div>
 
 <div id="bjflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Real-world applications routinely make authorization decisions
+              based on dynamic computation. Reasoning about dynamically computed authority is
+              challenging. Integrity of the system might be compromised if attackers can
+              improperly influence the authorizing computation. Confidentiality can also be
+              compromised by authorization, since authorization decisions are often based on
+              sensitive data such as membership lists and passwords. Previous formal models
+              for authorization do not fully address the security implications of permitting
+              trust relationships to change, which limits their ability to reason about
+              authority that derives from dynamic computation. Our goal is an approach to
+              constructing dynamic authorization mechanisms that do not violate
+              confidentiality or integrity.  The Flow-Limited Authorization Calculus (FLAC)
+              is a simple, expressive model for reasoning about dynamic authorization as well
+              as an information flow control language for securely implementing various
+              authorization mechanisms. FLAC combines the insights of two previous models: it
+              extends the Dependency Core Calculus with features made possible by the
+              Flow-Limited Authorization Model. FLAC provides strong end-to-end information
+              security guarantees even for programs that incorporate and implement rich
+              dynamic authorization mechanisms. These guarantees include noninterference and
+              robust declassification, which prevent attackers from influencing information
+              disclosures in unauthorized ways. We prove these security properties formally
+              for all FLAC programs and explore the expressiveness of FLAC with several
+              examples.</p>
 </div>
 
 <script>
@@ -477,6 +550,8 @@ Hirsch, Andrew K. and Azevedo de Amorim, Pedro Henrique and Cecchetti, Ethan and
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflafol()">ABSTRACT</button>
+
 
 <div id="aflafol" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{flafol,
@@ -495,7 +570,15 @@ Hirsch, Andrew K. and Azevedo de Amorim, Pedro Henrique and Cecchetti, Ethan and
 </div>
 
 <div id="bflafol" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>We present the Flow-Limited Authorization First-Order Logic
+                    (FLAFOL), a logic for reasoning about authorization decisions in the presence
+                    of information-ﬂow policies. We formalize the FLAFOL proof system, characterize
+                    its proof-theoretic properties, and develop its security guarantees. In
+                    particular, FLAFOL is the ﬁrst logic to provide a non-interference guarantee
+                    while supporting all connectives of ﬁrst-order logic. Furthermore, this
+                    guarantee is the ﬁrst to combine the notions of noninterference from both
+                    authorization logic and information-ﬂow systems. All the theorems in this paper
+                    are proven in Coq.</p>
 </div>
 
 <script>
@@ -557,6 +640,8 @@ Abadi, Daniel and <b>Arden, Owen</b> and Nawab, Faisal and Shadmon, Moshe
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractanylog()">ABSTRACT</button>
+
 
 <div id="aanylog" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{anylog,
@@ -571,7 +656,20 @@ Abadi, Daniel and <b>Arden, Owen</b> and Nawab, Faisal and Shadmon, Moshe
 </div>
 
 <div id="banylog" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>AnyLog is a decentralized platform for data publishing,
+                sharing, and querying IoT (Internet of Things) data that enables an unlimited
+                number of independent participants to publish and access the contents of IoT
+                datasets stored across the participants. AnyLog provides decentralized
+                publishing and querying functionality over structured data in an analogous
+                fashion to how the world wide web (WWW) enables decentralized publishing and
+                accessing of unstructured data. However, AnyLog differs from the traditional
+                WWW in the way that it provides incentives and ﬁnancial reward for performing
+                tasks that are critical to the well-being of the system as a whole, including
+                contribution, integration, storing, and processing of data, as well as
+                protecting the conﬁdentiality, integrity, and availability of that data.
+                Another difference is how Anylog enforces good behavior by the participants
+                through a collection of methods, including blockchain, secure enclaves, and
+                state channels.</p>
 </div>
 
 <script>
@@ -637,6 +735,8 @@ Gollamudi, Anitha and Chong, Stephen and <b>Arden, Owen</b>
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractdflate()">ABSTRACT</button>
+
 
 <div id="adflate" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{dflate,
@@ -653,7 +753,26 @@ Gollamudi, Anitha and Chong, Stephen and <b>Arden, Owen</b>
 </div>
 
 <div id="bdflate" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Distributed applications cannot assume that their security
+              policies will be enforced on untrusted hosts. Trusted execution environments
+              (TEEs) combined with cryptographic mechanisms enable execution of known code on
+              an untrusted host and the exchange of conﬁdential and authenticated messages
+              with it. TEEs do not, however, establish the trustworthiness of code executing
+              in a TEE. Thus, developing secure applications using TEEs requires specialized
+              expertise and careful auditing.
+              
+              This paper presents DFLATE, a core security calculus for distributed
+              applications with TEEs. DFLATE offers high-level abstractions that reﬂect both
+              the guarantees and limitations of the underlying security mechanisms they are
+              based on. The accuracy of these abstractions is exhibited by asymmetry between
+              conﬁdentiality and integrity in our formal results: DFLATE enforces a strong
+              form of noninterference for conﬁdentiality, but only a weak form for integrity.
+              This reﬂects the asymmetry of the security guarantees of a TEE: a malicious
+              host cannot access secrets in the TEE or modify its contents, but they can
+              suppress or manipulate the sequence of its inputs and outputs. Therefore DFLATE
+              cannot protect against the suppression of high-integrity messages, but when
+              these messages are delivered, their contents cannot have been inﬂuenced by an
+              attacker.</p>
 </div>
 
 <script>
@@ -719,6 +838,8 @@ Cecchetti, Ethan and Myers, Andrew C. and <b>Arden, Owen</b>
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractnmifc()">ABSTRACT</button>
+
 
 <div id="anmifc" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{nmifc,
@@ -737,7 +858,28 @@ Cecchetti, Ethan and Myers, Andrew C. and <b>Arden, Owen</b>
 </div>
 
 <div id="bnmifc" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Noninterference is a popular semantic security condition
+                because it offers strong end-to-end guarantees, it is inherently compositional,
+                and it can be enforced using a simple security type system. Unfortunately, it
+                is too restrictive for real systems. Mechanisms for downgrading information are
+                needed to capture real-world security requirements, but downgrading eliminates
+                the strong compositional security guarantees of noninterference.
+                
+                We introduce nonmalleable information flow, a new formal security condition
+                that generalizes noninterference to permit controlled downgrading of both
+                confidentiality and integrity. While previous work on robust declassification
+                prevents adversaries from exploiting the downgrading of confidentiality, our
+                key insight is transparent endorsement, a mechanism for downgrading integrity
+                while defending against adversarial exploitation. Robust declassification
+                appeared to break the duality of confidentiality and integrity by making
+                confidentiality depend on integrity, but transparent endorsement makes
+                integrity depend on confidentiality, restoring this duality. We show how to
+                extend a security-typed programming language with transparent endorsement and
+                prove that this static type system enforces nonmalleable information flow, a
+                new security property that subsumes robust declassification and transparent
+                endorsement. Finally, we describe an implementation of this type system in the
+                context of Flame, a flow-limited authorization plugin for the Glasgow Haskell
+                Compiler.</p>
 </div>
 
 <script>
@@ -803,6 +945,8 @@ Liu, Jed and <b>Arden, Owen</b> and George, Michael D. and Myers, Andrew C.
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractjfabric()">ABSTRACT</button>
+
 
 <div id="ajfabric" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@article{jfabric,
@@ -822,7 +966,32 @@ Liu, Jed and <b>Arden, Owen</b> and George, Michael D. and Myers, Andrew C.
 </div>
 
 <div id="bjfabric" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>Distributed information systems are prevalent in modern
+                computing but difﬁcult to build securely. Because systems commonly span domains
+                of trust, host nodes share data and code of varying degrees of trustworthiness.
+                Modern systems are often open and extensible, making security even harder to
+                reason about. Unfortunately, standard methods for software construction do not
+                help programmers enough with ensuring their software is secure.
+                
+                Fabric is a system and language for building open, distributed, extensible
+                information systems that are secure by construction. Fabric is a decentralized
+                system that allows nodes to securely share both data and code despite mutual
+                distrust. All resources are labeled with conﬁdentiality and integrity policies
+                that are enforced through a combination of compile-time and run-time
+                mechanisms.
+                
+                The Fabric language offers a high-level but powerful model of computation. All
+                resources appear as objects in the language, and the distribution and
+                persistence of code and data are largely transparent to programmers. Fabric
+                supports both data-shipping and query/RPC styles of computation: computation
+                and information can both move between nodes. Optimistic, nested transactions
+                ensure consistency across all objects and nodes. Fabric programs can securely
+                share mobile code across trust domains, enabling more reuse and evolution of
+                code and supporting new kinds of secure applications not possible in other
+                distributed systems. Results from applications built using Fabric suggest that
+                Fabric enforces strong security while offering a clean, concise, powerful
+                programming model with good performance. An open-source prototype is available
+                for download.</p>
 </div>
 
 <script>
@@ -888,6 +1057,8 @@ Waye, Lucas and Buiras, Pablo and <b>Arden, Owen</b> and Russo, Alejandro and Ch
 
 
 
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractclio()">ABSTRACT</button>
+
 
 <div id="aclio" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>@inproceedings{clio,
@@ -905,7 +1076,15 @@ Waye, Lucas and Buiras, Pablo and <b>Arden, Owen</b> and Russo, Alejandro and Ch
 </div>
 
 <div id="bclio" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<p></p>
+<p>We present Clio, an information flow control (IFC) system that
+              transparently incorporates cryptography to enforce confidentiality and
+              integrity policies on untrusted storage. Clio insulates developers from
+              explicitly manipulating keys and cryptographic primitives by leveraging the
+              policy language of the IFC system to automatically use the appropriate keys and
+              correct cryptographic operations. We prove that Clio is secure with a novel
+              proof technique that is based on a proof style from cryptography together with
+              standard programming languages results. We present a prototype Clio
+              implementation and a case study that demonstrates Clio’s practicality.</p>
 </div>
 
 <script>
@@ -947,21 +1126,6 @@ function toggleAbstractclio(parameter) {
 </div>
 
 <div class="jumbotron">
-  <h4>Current Projects</h4>
-  
-    <p>Phoenix</p>
-  
-    <p>FLAQR</p>
-  
-    <p>Proximal Consensus</p>
-  
-    <p>Decent</p>
-  
-    <p>FlowFrame</p>
-  
-</div>
-
-<div class="jumbotron">
   <h4> Current PhD students</h4>
   
   
@@ -982,6 +1146,53 @@ function toggleAbstractclio(parameter) {
       (co-advised with <a href='https://people.ucsc.edu/~palvaro/'>Peter Alvaro</a>)
    
    </p>
+  
+</div>
+
+<div class="jumbotron">
+  <h4>Current Projects</h4>
+  
+  
+    <p>
+    <h5><a href="">Decent</a></h5>
+    <h7>Secure decentralized applications with Trusted Execution Environments.</h7>
+    </p>
+  
+    <p>
+    <h5><a href="">Flow-limited authorization</a></h5>
+    <h7>An expressive new security model that unifies authorization and information flow control.</h7>
+    </p>
+  
+    <p>
+    <h5><a href="">FlowFrame</a></h5>
+    <h7>Practical static information flow control for Scala Spark applications.</h7>
+    </p>
+  
+    <p>
+    <h5><a href="">Phoenix</a></h5>
+    <h7>Resilient consensus protocols using re-configuration.</h7>
+    </p>
+  
+    <p>
+    <h5><a href="">Proximal Consensus</a></h5>
+    <h7>Responsive, fault-tolerant data pipelines at the edge.</h7>
+    </p>
+  
+</div>
+
+<div class="jumbotron">
+  <h4>Previous Projects</h4>
+  
+  
+    <p>
+    <h5><a href="https://www.cs.cornell.edu/projects/fabric/">Fabric</a></h5>
+    <h7>A language and runtime for enforcing information flow control in federated applications.</h7>
+    </p>
+  
+    <p>
+    <h5><a href="/home/projects/flame">Flame</a></h5>
+    <h7>Flow-limited authorization for Haskell</h7>
+    </p>
   
 </div>
 
