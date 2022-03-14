@@ -117,6 +117,7 @@ References
         series = {SSP'12},
         file = {mobile.pdf},
         doi = {10.1109/SP.2012.22},
+        blurb = {A new architecture for secure mobile code for publishing and sharing code dynamically across trust domains.},
 	abstract = {Mobile code is now a nearly inescapable component of modern
                     computing, thanks to client-side code that runs within web browsers. The usual
                     tension between security and functionality is particularly acute in a
@@ -153,6 +154,8 @@ References
     series = {VLDB'12},
     url = "http://vldb.org/pvldb/vol5/p1471_alvincheung_vldb2012.pdf",
     file = {pyxis.pdf},
+    blurb = {Pyxis adaptively migrates computation between clients and a database server by 
+             combining static dependency analysis with dynamic workload profiling.},
     abstract = {Database-backed applications are nearly ubiquitous in our daily
                 lives. Applications that make many small accesses to the database create two
                 challenges for developers: increased latency and wasted resources from numerous
@@ -176,9 +179,12 @@ References
     title = "{StatusQuo}: Making familiar abstractions perform using program analysis",
     author = "Alvin Cheung and Samuel Madden and Armando Solar-Lezama and Owen Arden and Andrew C. Myers",
     booktitle = "Conference on Innovative Data Systems Research (CIDR)",
-    url = "http://www.cidrdb.org/cidr2013/Papers/CIDR13_Paper117.pdf",
+    url = "http://cidrdb.org/cidr2013/Papers/CIDR13_Paper117.pdf",
     year = 2013,
     month = jan,
+    blurb = {A new 4-safety hyperproperty for secure declassification and endorsement and a type 
+             system for enforcing it.},
+    awards = {Best paper},
     series = {CIDR'13},
     file = {statusquo.pdf}
 }
@@ -234,6 +240,9 @@ References
 	booktitle={2016 IEEE 29th Computer Security Foundations Symposium (CSF)},   
 	title={A Calculus for Flow-Limited Authorization},
 	year={2016},  
+        blurb = {A core programming model that uses flow-limited authorization to provide 
+		end-to-end information security to dynamic authorization mechanisms and 
+                programs that use them.},
 	abstract={Real-world applications routinely make authorization decisions
               based on dynamic computation. Reasoning about dynamically computed authority is
               challenging. Integrity of the system might be compromised if attackers can
@@ -279,8 +288,8 @@ References
     month = apr,
     year = 2014,
     series = {NSDI'14},
-    doi = {10.5555/2616448.2616495}
-    url = {https://dl-acm-org.oca.ucsc.edu/doi/10.14778/2350229.2350262}
+    doi = {10.5555/2616448.2616495},
+    url = {https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/liu_jed},
     file = {nsdi14.pdf},
     abstract = {We present a new mechanism, warranties, to enable building
                 distributed systems with linearizable transactions. A warranty is a
@@ -308,7 +317,7 @@ References
     doi = "10.3233/JCS-0559",
     series = {JCS'17},
     file = {jfabric.pdf},
-
+    blurb = {A secure, decentralized, and distributed programming language and system.},
     abstract = {Distributed information systems are prevalent in modern
                 computing but difﬁcult to build securely. Because systems commonly span domains
                 of trust, host nodes share data and code of varying degrees of trustworthiness.
@@ -344,7 +353,8 @@ References
     bookTitle="Foundations of Security, Protocols, and Equational Reasoning: Essays Dedicated to Catherine A. Meadows",
     year="2019",
     pages="70--88",
-
+    blurb = {JRIF programs use Reactive Information Flow specifications based on finite-state 
+             automata that provide expressive policies without the need for explicit downgrading operations.},
     abstract={A reactive information flow (RIF) automaton for a value v
               specifies (i) restrictions on uses for v and (ii) the RIF automaton for any
               value that might be derived from v. RIF automata thus specify how transforming
@@ -375,7 +385,9 @@ References
     series = {CCS'17},
     doi = {10.1145/3133956.3134054},
     file = {nmifc_ccs17.pdf},
-
+    blurb = {A new 4-safety hyperproperty for secure declassification and endorsement and a 
+             type system for enforcing it.},
+    awards = {Best paper ﬁnalist (11 ﬁnalists out of 151 accepted papers).},
     abstract = {Noninterference is a popular semantic security condition
                 because it offers strong end-to-end guarantees, it is inherently compositional,
                 and it can be enforced using a simple security type system. Unfortunately, it
@@ -414,6 +426,9 @@ References
   doi       = {10.1145/3133956.3134036},
   series    = {CCS'17},
   file      = {clio_ccs17.pdf},
+  blurb     = {An information flow control system that transparently
+               incorporates cryptography to enforce confidentiality and integrity policies on
+               untrusted storage.},
   abstract = {We present Clio, an information flow control (IFC) system that
               transparently incorporates cryptography to enforce confidentiality and
               integrity policies on untrusted storage. Clio insulates developers from
@@ -434,7 +449,8 @@ References
   series = {CSF'19},
   doi = {10.1109/CSF.2019.00028},
   file = {dflate.pdf},
-
+  blurb = {DFLATE offers high-level security abstractions that reflect both the guarantees 
+		and limitations of the TEE security mechanisms.},
   abstract = {Distributed applications cannot assume that their security
               policies will be enforced on untrusted hosts. Trusted execution environments
               (TEEs) combined with cryptographic mechanisms enable execution of known code on
@@ -468,6 +484,7 @@ References
 	doi={10.1109/CSF49147.2020.00017},
         series={CSF'20},
         file={flafol.pdf},
+        blurb = {A logic for reasoning about authorization decisions in the presence of information-flow policies.},
 	abstract = {We present the Flow-Limited Authorization First-Order Logic
                     (FLAFOL), a logic for reasoning about authorization decisions in the presence
                     of information-ﬂow policies. We formalize the FLAFOL proof system, characterize
@@ -489,6 +506,8 @@ References
 	doi             = {10.1109/ICBC51069.2021.9461081},
 	series          = {ICBC'21},
         file = "eclipse.pdf",
+        blurb = {Using difficulty monitoring to reliably detect extended eclipse attacks, even when the 
+                 adversary controls all network connectivity.},
 	abstract = {Enclave applications that rely on blockchains for integrity
                     and availability are vulnerable to eclipse attacks. In this paper, we present
                     an approach for reliably detecting extended eclipse attacks, even when the
@@ -513,6 +532,8 @@ References
 	numpages = {14},
         series = {ASSS'21},
         file = "decent.pdf",
+        blurb = {A framework for building secure decentralized applications with trusted execution environments 
+                 and remote attestation.},
 	abstract = {Remote attestation (RA) authenticates code running in
                     trusted execution environments (TEEs), allowing trusted code to be deployed
                     even on untrusted hosts. However, trust relationships established by one
@@ -546,6 +567,9 @@ References
     year = 2020,
     series = {CIDR'20},
     file = {anylog.pdf},
+    url = {http://cidrdb.org/cidr2020/papers/p9-abadi-cidr20.pdf},
+    blurb = {A new vision for a completely decentralized, ownerless platform for sharing 
+             structured data.},
     abstract = {AnyLog is a decentralized platform for data publishing,
                 sharing, and querying IoT (Internet of Things) data that enables an unlimited
                 number of independent participants to publish and access the contents of IoT
@@ -593,6 +617,9 @@ References
   doi = {10.48550/arXiv.2104.10379},
   year={2021},
   file={jflactr.pdf},
+  blurb={A core programming model that uses flow-limited authorization to provide end-to-end 
+	information security to dynamic authorization mechanisms and programs that use them.},
+  awards={Revised, corrected, and expanded version of CSF'16 paper},
   abstract = {Real-world applications routinely make authorization decisions
               based on dynamic computation. Reasoning about dynamically computed authority is
               challenging. Integrity of the system might be compromised if attackers can

@@ -24,7 +24,22 @@ pre{
 
 <div class="text-justify">
 <h5 >{{ entry.title }}</h5>
-<h6>{{ entry.series}}</h6>
+{% if entry.blurb %}
+<h6>{{ entry.blurb}}</h6>
+{% endif %}
+<h6>
+{% if entry.series %}
+{{entry.series}}
+{% else %}
+{% if entry.type == 'techreport' %}
+Technical Report
+{% endif %}
+{% if entry.type == 'phdthesis' %}
+Ph.D. Dissertation
+{% endif %}
+{% endif %}
+{% if entry.awards %}&nbsp;&nbsp;<b><em>{{entry.awards}}</em></b>{% endif %}
+</h6>
 {{entry.author | replace_first: 'Arden, Owen', '<b>Arden, Owen</b>' }}
 </div>
 
@@ -47,6 +62,10 @@ pre{
 <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
 {% else %}
 <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+{% endif %}
+{% else %}
+{% if entry.url %}
+<a href="{{ entry.url }}" target="_blank"><button class="btn btn-success btm-sm">URL</button></a>
 {% endif %}
 {% endif %}
 
