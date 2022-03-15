@@ -5,15 +5,26 @@ sitemap: false
 permalink: /
 ---
 ### Research Interests
+<div style="font-size:120%">
+I study **decentralized security** with a focus on **language-based**
+techniques, using programming language theory and design to build decentralized
+applications that are **secure by construction**.  My research includes both
+foundational and practical contributions, from developing novel, more **expressive
+security models and formal languages**, to **building secure decentralized systems
+and compilers**.
+</div>
+<br/>
+
 <!--
 #### Advancing Computer Security Foundations
 #### Designing Secure Programming Abstractions
 #### Building Secure Distributed and Decentralized Systems
--->
 
 Developing secure applications is unreasonably hard. Real-world security breaches rarely result from direct attacks on security mechanisms. Instead, attackers take advantage of applications that use these mechanisms incorrectly or violate their assumptions.
 
 Application developers should be domain experts, not security experts. I study language-based approaches to building decentralized and distributed applications that are secure by construction. Using high-level abstractions to synthesize low-level security protocols, programmers can build secure applications without being security experts.
+
+-->
 
 {% if site.data.news %}
 <div class="jumbotron">

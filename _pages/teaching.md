@@ -22,6 +22,18 @@ permalink: /teaching/
 </ul>
 </div>
 
+{% assign postdocs = site.data.people | where:"degree","postdoc" | where:"status", "current" | sort:"name" %}
+{% if postdocs != empty %}
+<div class="jumbotron">
+### Postdocs 
+  <ul>
+  {% for student in postdocs %}
+   <li> <a href="{{ student.url }}">{{ student.name }}</a> </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
 <div class="jumbotron">
 ### Courses
 <ul>
@@ -55,7 +67,6 @@ permalink: /teaching/
 ### Other advising
 <ul>
 {% assign students = site.data.people | where_exp:"student", "student.degree == 'B.S.' or student.role contains 'committee'" | sort:"name" %}
-{% assign phds = site.data.people |  where:"status", "current" | sort:"name" %}
 {% for student in students %}
  <li> <a href="{{ student.url }}">{{ student.name }}</a>
  ({{ student.degree }}{% if student.job %}, now at {{ student.job }}{% endif %})
