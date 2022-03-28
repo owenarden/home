@@ -1,3 +1,13 @@
+- name: Advanced Programming Languages
+  dept: CSE
+  number: 210B
+  offerings: 
+    - quarter: Spring
+      year: 2020
+      url:  #
+    - quarter: Spring
+      year: 2022
+      url: https://ucsc-cse-210b.github.io/spr22/
 - name: Advanced Computer Security
   dept: CMPS
   number: 223 
@@ -49,16 +59,6 @@
   offerings: 
     - quarter: Winter
       year: 2020
-      url:  #
-- name: Advanced Programming Languages
-  dept: CSE
-  number: 210B
-  offerings: 
-    - quarter: Spring
-      year: 2020
-      url:  #
-    - quarter: Spring
-      year: 2022
       url:  #
 - name: Foundations of Programming Languages
   dept: CSE
