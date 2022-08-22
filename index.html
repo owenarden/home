@@ -148,6 +148,226 @@ pre{
 
 
 <div class="text-justify">
+<h5>Applying consensus and replication securely with FLAQR</h5>
+
+<h6>A formal language for building application-level consensus and replication protocols 
+         that are secure by construction.</h6>
+
+<h6>
+
+CSF’22
+
+&nbsp;&nbsp;<b><em>Distinguished paper award</em></b>
+</h6>
+Mondal, Priyanka and Algehed, Maximilian and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io//home/papers/flaqr.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF54842.2022.00011" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexflaqr()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflaqr()">ABSTRACT</button>
+
+
+<div id="aflaqr" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{flaqr,
+  author = {Mondal, Priyanka and Algehed, Maximilian and Arden, Owen},
+  booktitle = {35\textsuperscript{th} {IEEE} Computer Security Foundations Symp. (CSF)},
+  title = {Applying consensus and replication securely with FLAQR},
+  blurb = {A formal language for building application-level consensus and replication protocols 
+           that are secure by construction.},
+  awards = {Distinguished paper award},
+  series = {CSF'22},
+  year = {2022},
+  month = aug,
+  doi = {10.1109/CSF54842.2022.00011},
+  file = {flaqr.pdf},
+  volume = {},
+  number = {}
+}
+</pre>
+</div>
+
+<div id="bflaqr" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Availability is crucial to the security of distributed systems, but
+            guaranteeing availability is hard, especially when participants in the system
+            may act maliciously. Quorum replication protocols provide both integrity and
+            availability: data and computation is replicated at multiple independent hosts,
+            and a quorum of these hosts must agree on the output of all operations applied
+            to the data. Unfortunately, these protocols have high overhead and can be
+            difﬁcult to calibrate for a speciﬁc application’s needs. Ideally, developers
+            could use high-level abstractions for consensus and replication to write
+            fault-tolerant code by that is secure by construction.
+%            
+            This paper presents Flow-Limited Authorization for Quorum Replication (FLAQR),
+            a core calculus for building distributed applications with heterogeneous quorum
+            replication protocols while enforcing end-to-end information security. Our type
+            system ensures that well-typed FLAQR programs cannot fail (experience an
+            unrecoverable error) in ways that violate their typelevel speciﬁcations. We
+            present noninterference theorems that characterize FLAQR’s conﬁdentiality,
+            integrity, and availability in the presence of consensus, replication, and
+            failures, as well as a liveness theorem for the class of majority quorum
+            protocols under a bounded number of faults.</p>
+</div>
+
+<script>
+function toggleBibtexflaqr(parameter) {
+    var x= document.getElementById('aflaqr');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractflaqr(parameter) {
+    var x= document.getElementById('bflaqr');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>Payment Channels Under Network Congestion</h5>
+
+<h6>Addressing congestion attacks in payment channel networks.</h6>
+
+<h6>
+
+ICBC’22
+
+
+</h6>
+Tran, Tuan and Zheng, Haofan and Alvaro, Peter and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io//home/papers/icbc22.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/ICBC54727.2022.9805547" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexicbc22()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstracticbc22()">ABSTRACT</button>
+
+
+<div id="aicbc22" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{icbc22,
+  author = {Tran, Tuan and Zheng, Haofan and Alvaro, Peter and Arden, Owen},
+  title = {Payment Channels Under Network Congestion},
+  booktitle = {2022 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},
+  blurb = {Addressing congestion attacks in payment channel networks.},
+  series = {ICBC'22},
+  doi = {10.1109/ICBC54727.2022.9805547},
+  file = {icbc22.pdf},
+  year = {2022},
+  month = may,
+  address = {New York, NY, USA}
+}
+</pre>
+</div>
+
+<div id="bicbc22" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Sending transactions on leading blockchains such as
+                           Ethereum can be slow and costly. A payment channel is a wellknown scaling
+                           solution that minimizes transactions sent on the chain, and allows users to
+                           transact more efﬁciently. One of the guarantees of payment channels is that
+                           there is no counterparty risk, so an honest party is able to withdraw the
+                           amount of money that is reﬂected by the most recent transaction agreed by both
+                           parties. In this paper, we show that this guarantee can be violated when the
+                           network is under congestion. Regardless of whether or not the honest party is
+                           online, the malicious party can leverage high transaction fees to gain more
+                           money than they’re supposed to. We present a novel construction of payment
+                           channels that helps mitigates these types of attacks.</p>
+</div>
+
+<script>
+function toggleBibtexicbc22(parameter) {
+    var x= document.getElementById('aicbc22');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstracticbc22(parameter) {
+    var x= document.getElementById('bicbc22');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
 <h5>Total Eclipse of the Enclave: Detecting Eclipse Attacks From Inside TEEs</h5>
 
 <h6>Using difficulty monitoring to reliably detect extended eclipse attacks, even when the 
