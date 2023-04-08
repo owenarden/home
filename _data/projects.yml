@@ -13,6 +13,7 @@
 - title: FlowFrame
   blurb: Practical static information flow control for Scala Spark applications.
   status: active
+  url: https://github.com/owenarden/flowframe
 - title: Fabric
   blurb: A language and runtime for enforcing information flow control in federated applications.
   status: completed
