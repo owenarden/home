@@ -148,6 +148,113 @@ pre{
 
 
 <div class="text-justify">
+<h5>Unstick Yourself: Recoverable Byzantine Fault Tolerant Services</h5>
+
+<h6>Improving the recoverability of Byzantine fault tolerant protocols.</h6>
+
+<h6>
+
+ICBC’23
+
+
+</h6>
+Tran, Tuan and Nawab, Faisal and Alvaro, Peter and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/Phoenix.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexphoenix()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractphoenix()">ABSTRACT</button>
+
+
+<div id="aphoenix" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{phoenix,
+  author = {Tran, Tuan and Nawab, Faisal and Alvaro, Peter and Arden, Owen},
+  title = {Unstick Yourself: Recoverable Byzantine Fault Tolerant Services},
+  booktitle = {2023 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},
+  blurb = {Improving the recoverability of Byzantine fault tolerant protocols.},
+  series = {ICBC'23},
+  %doi = {10.1109/ICBC54727.2022.9805547},
+  file = {Phoenix.pdf},
+  year = {2023},
+  month = may,
+  address = {New York, NY, USA}
+}
+</pre>
+</div>
+
+<div id="bphoenix" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Byzantine fault tolerant (BFT) state machine
+                           replication (SMR) protocols that can tolerate up to f failures in a
+                           configuration of n = 3f + 1 replicas cannot make any liveness guarantee once
+                           the number of faults surpasses f, even if some of these faults are benign crash
+                           faults. We argue that this weakness makes BFT protocols impractical in
+                           real-world deployments where faults accumulate over time. In this paper, we
+                           present a new reconfiguration mechanism, Phoenix, that builds on the
+                           pre-existing fault detection and reconfiguration mechanisms of BFT protocols to
+                           remove faulty replicas proactively using a trusted (but limited) configuration
+                           manager. We show that Phoenix can recover from f B Byzantine faults and f_C
+                           crash faults, where f_C ≤ f_B, if the system deploys n = 3f_B + f_C + 1
+                           replicas. If a synchronous network connection is guaranteed between replicas
+                           and the configuration manager during reconfiguration, a synchronous variant of
+                           Phoenix needs only n = 3f_B +1 replicas to achieve the same recoverability. To
+                           validate our approach, we implement Phoenix as an extension of the BFT-SMaRT
+                           library.</p>
+</div>
+
+<script>
+function toggleBibtexphoenix(parameter) {
+    var x= document.getElementById('aphoenix');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractphoenix(parameter) {
+    var x= document.getElementById('bphoenix');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
 <h5>Applying consensus and replication securely with FLAQR</h5>
 
 <h6>A formal language for building application-level consensus and replication protocols 
@@ -171,7 +278,7 @@ Mondal, Priyanka and Algehed, Maximilian and <b>Arden, Owen</b>
 
 
 
-<a href="http://doi.org/10.1109/CSF54842.2022.00011" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+<a href="http://doi.org/10.1109/CSF54842.2022.9919637" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
 
 
 
@@ -194,7 +301,7 @@ Mondal, Priyanka and Algehed, Maximilian and <b>Arden, Owen</b>
   series = {CSF'22},
   year = {2022},
   month = aug,
-  doi = {10.1109/CSF54842.2022.00011},
+  doi = {10.1109/CSF54842.2022.9919637},
   file = {flaqr.pdf},
   volume = {},
   number = {}
@@ -270,7 +377,7 @@ pre{
 
 <h6>
 
-ICBC’22
+ICBC’22 (short paper)
 
 
 </h6>
@@ -304,7 +411,7 @@ Tran, Tuan and Zheng, Haofan and Alvaro, Peter and <b>Arden, Owen</b>
   title = {Payment Channels Under Network Congestion},
   booktitle = {2022 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},
   blurb = {Addressing congestion attacks in payment channel networks.},
-  series = {ICBC'22},
+  series = {ICBC'22 (short paper)},
   doi = {10.1109/ICBC54727.2022.9805547},
   file = {icbc22.pdf},
   year = {2022},
@@ -375,7 +482,7 @@ pre{
 
 <h6>
 
-ICBC’21
+ICBC’21 (short paper)
 
 
 </h6>
@@ -412,7 +519,7 @@ Zheng, Haofan and Tran, Tuan and <b>Arden, Owen</b>
   month = may,
   address = {New York, NY, USA},
   doi = {10.1109/ICBC51069.2021.9461081},
-  series = {ICBC'21},
+  series = {ICBC'21 (short paper)},
   file = {eclipse.pdf},
   blurb = {Using difficulty monitoring to reliably detect extended eclipse attacks, even when the 
                    adversary controls all network connectivity.}
@@ -1524,7 +1631,7 @@ function toggleAbstractclio(parameter) {
     </p>
   
     <p>
-    <h5><a href="">FlowFrame</a></h5>
+    <h5><a href="https://github.com/owenarden/flowframe">FlowFrame</a></h5>
     <h7>Practical static information flow control for Scala Spark applications.</h7>
     </p>
   
@@ -1595,7 +1702,7 @@ function toggleAbstractclio(parameter) {
 		</div>
 	  </div>
 
-      <center><p>&copy 2022 Owen Arden </p></center>
+      <center><p>&copy 2023 Owen Arden </p></center>
 	</div>
   </div>
 </div>
