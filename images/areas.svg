@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="379.5 351.5 313.5 289" width="313.5" height="289">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="399.5 371.5 273.5 249" width="273.5" height="249">
   <defs/>
-  <g id="Canvas_1" fill="none" stroke-opacity="1" stroke="none" fill-opacity="1" stroke-dasharray="none">
+  <g id="Canvas_1" stroke-dasharray="none" fill-opacity="1" stroke="none" stroke-opacity="1" fill="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
@@ -16,8 +16,9 @@
       <g id="Graphic_3">
         <path d="M 417.03125 457 L 638.4375 457 C 655.46875 457 655.46875 457 655.46875 461.875 L 655.46875 459.4375 C 663.9844 459.4375 663.9844 459.4375 663.9844 464.3125 L 663.9844 461.875 C 672.5 461.875 672.5 461.875 672.5 466.75 L 672.5 530.125 C 672.5 535 672.5 535 655.46875 535 L 434.0625 535 C 417.03125 535 417.03125 535 417.03125 532.5625 C 408.51562 532.5625 408.51562 532.5625 408.51562 530.125 C 400 530.125 400 530.125 400 525.25 L 400 461.875 C 400 457 400 457 417.03125 457 Z" fill="#f57c3a"/>
         <path d="M 417.03125 457 L 638.4375 457 C 655.46875 457 655.46875 457 655.46875 461.875 L 655.46875 525.25 C 655.46875 530.125 655.46875 530.125 638.4375 530.125 L 417.03125 530.125 C 400 530.125 400 530.125 400 525.25 L 400 461.875 C 400 457 400 457 417.03125 457 M 655.46875 459.4375 C 663.9844 459.4375 663.9844 459.4375 663.9844 464.3125 L 663.9844 530.125 C 663.9844 532.5625 663.9844 532.5625 646.9531 532.5625 L 425.5469 532.5625 C 408.51562 532.5625 408.51562 532.5625 408.51562 530.125 M 663.9844 461.875 C 672.5 461.875 672.5 461.875 672.5 466.75 L 672.5 530.125 C 672.5 535 672.5 535 655.46875 535 L 434.0625 535 C 417.03125 535 417.03125 535 417.03125 532.5625" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-        <text transform="translate(410.45 482.681)" fill="white">
-          <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="35.04575" y="15">Security Abstractions</tspan>
+        <text transform="translate(410.45 473.457)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="25.541752" y="15">Programming Language </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="23.197752" y="33.448">Abstractions for Security</tspan>
         </text>
       </g>
       <g id="Graphic_4">
