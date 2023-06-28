@@ -6,17 +6,17 @@ permalink: /
 ---
 
 ### Research Interests
-
-<img align="right" src="/home/images/areas.svg"/>
-
 <br />
-<p style="font-size:120%">
-I study **decentralized security** with a focus on **language-based
-techniques**, using programming language theory and design to build **decentralized
-applications that are secure by construction**.  My research includes both
-foundational and practical contributions, from developing novel, more **expressive
-security models and formal languages**, to **building secure decentralized systems
-and compilers**.
+
+<img align="right" style="margin:0.5em" src="/home/images/areas.svg"/>
+
+<p style="font-size:130%">
+I study **decentralized security** with a focus on
+using **programming language theory and design** to build decentralized
+applications that are **secure by construction**.  My research includes both
+foundational and practical contributions, from developing novel, more expressive
+security models and formalized programming languages, to building secure decentralized systems
+and compilers.
 </p>
 <br clear="right"/>
 
