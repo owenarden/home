@@ -37,7 +37,7 @@ permalink: /teaching/
 <div class="jumbotron">
 ### Courses
 <ul>
-{% assign courses = site.data.courses | sort: "number" %}
+{% assign courses = site.data.courses %}
 {% for course in courses %}
  <li> {{course.dept}} {{course.number}}: {{ course.name }}&nbsp;
       {% for offered in course.offerings %}
