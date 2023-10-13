@@ -105,20 +105,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="information-flow-control-for-rest-style-web-applications">Information Flow Control for REST-style Web Applications</h2>
 
-<p>Web applications often store data for multiple users in
-  a single data structure. While convenient, implementation
-  errors could lead to information leaks.  Labeling each
-  user’s data with information flow policies and enforcing
-  information flow control with Flame eliminates such errors
-  by construction.  We took an existing <a href="https://github.com/krdlab/examples/tree/master/haskell-servant-webapp">
-  Servant REST webapp</a> for storing and retrieving memos,
-  added support for multiple users, and enforced information
-  flow control to ensure only the user possessing a secret key
-  may create, read, or delete the associated memos.
-  &lt;/p&gt;</p>
+<p> Web applications often store data for multiple users in
+a single data structure. While convenient, implementation
+errors could lead to information leaks.  Labeling each
+user’s data with information flow policies and enforcing
+information flow control with Flame eliminates such errors
+by construction.  We took an existing <a href="https://github.com/krdlab/examples/tree/master/haskell-servant-webapp">
+Servant REST webapp</a> for storing and retrieving memos,
+added support for multiple users, and enforced information
+flow control to ensure only the user possessing a secret key
+may create, read, or delete the associated memos.
+</p>
 
 <p>
-  Instructions:
+Instructions:
 &lt;pre&gt;
   &gt; git clone https://bitbucket.org/decenters/flame-examples
   &gt; cd flame-examples/memodb
@@ -135,97 +135,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   &gt; curl -H “servant-auth-cookie:key1” http://localhost:8080/memos
   [{“createdAt”:”2017-09-14T19:24:17.720088Z”,”text”:”Flame rocks!”,”id”:1}]
 &lt;/pre&gt;
-	  </p>
+</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;
-  You can also use a sample webage that embeds Javascript that uses this API. First, browse to &lt;a href="http://localhost:8080"&gt;&lt;tt&gt;http://localhost:8080&lt;/tt&gt;&lt;/a&gt;.
-  Entering a valid secret key (try &lt;tt&gt;key1&lt;/tt&gt;, &lt;tt&gt;key2&lt;/tt&gt;, or &lt;tt&gt;key3&lt;/tt&gt;) will list the memos for that user allow you to enter new ones.
-      &lt;center&gt;&lt;image src="images/memodb.png"/&gt;&lt;/center&gt;
-  &lt;/p&gt;
-  &lt;p&gt;Finally, you can try a Flame-enabled Servant client:
-</code></pre></div></div>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
+<p>
+You can also use a sample webage that embeds Javascript that uses this API. First, browse to <a href="http://localhost:8080"><tt>http://localhost:8080</tt></a>.
+Entering a valid secret key (try <tt>key1</tt>, <tt>key2</tt>, or <tt>key3</tt>) will list the memos for that user allow you to enter new ones.
+<center><image src="images/memodb.png"></image></center>
+</p>
+<p>Finally, you can try a Flame-enabled Servant client:
+&lt;pre style="white-space:pre-wrap; word-wrap:break-word;"&gt;
   &gt; stack build :memodb-client
   &gt; stack exec memodb-client
   GET key1 before POST: []
-  GET key1 after POST: [Memo {id = 1, text = "Try Flame and Servant!", createdAt = 2017-09-14 21:07:31.325636 UTC}]
-</pre>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      A big advantage of this approach is that
-      &lt;code&gt;memodb-client&lt;/code&gt; and &lt;code&gt;memodb-server&lt;/code&gt;
-      link against the same API specification, ensuring that the same
-      security policies are enforced on the client and the server.
-    &lt;/p&gt; 
-    &lt;h1 id="nmifc"&gt;Nonmalleable Information Flow Control for Basic Authentication&lt;/h1&gt;
-     
-  &lt;p&gt;&lt;a href="/publications/2017-10-02-nmifc.html"&gt;Nonmalleable information flow control&lt;/a&gt; (NMIFC)
-         enforces security for programs that &lt;em&gt;downgrade&lt;/em&gt; confidentiality and integrity policies. 
-         Like robust declassification, nonmalleability prevents attackers from controlling what information
-         is declassified by a program.  NMIFC goes further to prevent attackers from leveraging endorsements
-         to influence declassifications or manipulate confidential data.  &lt;/p&gt;
-     
-      &lt;p&gt; NMIFC is useful for authentication mechanisms since they inherently require endorsement and declassification: 
-         the result of an authentication attempt is public and trustworthy, despite having a secret dependency (the password or other secret authentication data) and an
-         untrustworthy dependency (the password guess). 
-      &lt;/p&gt;
-      &lt;p&gt; To demonstrate how Flame can be used to enforce NMIFC for authentication mechanisms, we have 
-          implemented a &lt;a href="https://www.ietf.org/rfc/rfc2617.txt"&gt;Basic Authentication&lt;/a&gt;
-          module for the Servant web application framework. We used this module to provide a new authentication to our
-          &lt;a href="#ifcapps"&gt;multi-user memo app&lt;/a&gt;.
-          &lt;center&gt;&lt;image src="images/nmauthdemo.png"/&gt;&lt;/center&gt;
-      &lt;/p&gt;
-  &lt;p&gt;
-  Instructions:
-</code></pre></div></div>
-<pre>
+  GET key1 after POST: [Memo {id = 1, text = “Try Flame and Servant!”, createdAt = 2017-09-14 21:07:31.325636 UTC}]
+&lt;/pre&gt;
+A big advantage of this approach is that
+<code>memodb-client</code> and <code>memodb-server</code>
+link against the same API specification, ensuring that the same
+security policies are enforced on the client and the server.
+</p>
+<h1 id="nmifc">Nonmalleable Information Flow Control for Basic Authentication</h1>
+
+<p><a href="/publications/2017-10-02-nmifc.html">Nonmalleable information flow control</a> (NMIFC)
+             enforces security for programs that <em>downgrade</em> confidentiality and integrity policies. 
+             Like robust declassification, nonmalleability prevents attackers from controlling what information
+             is declassified by a program.  NMIFC goes further to prevent attackers from leveraging endorsements
+             to influence declassifications or manipulate confidential data.  </p>
+
+<p> NMIFC is useful for authentication mechanisms since they inherently require endorsement and declassification: 
+             the result of an authentication attempt is public and trustworthy, despite having a secret dependency (the password or other secret authentication data) and an
+             untrustworthy dependency (the password guess). 
+</p>
+<p> To demonstrate how Flame can be used to enforce NMIFC for authentication mechanisms, we have 
+              implemented a <a href="https://www.ietf.org/rfc/rfc2617.txt">Basic Authentication</a>
+              module for the Servant web application framework. We used this module to provide a new authentication to our
+              <a href="#ifcapps">multi-user memo app</a>.
+              <center><image src="images/nmauthdemo.png"></image></center>
+</p>
+<p> Instructions:
+&lt;pre&gt;
   git clone https://bitbucket.org/decenters/flame-examples
   cd flame-examples/memodb
   stack build :nmauthdemo
   stack exec nmauthdemo
-</pre>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Then, browse to &lt;a href="http://localhost:8080"&gt;&lt;tt&gt;http://localhost:8080&lt;/tt&gt;&lt;/a&gt;. You can use username "alice" and password "12345" to log in.
-      &lt;em&gt;Hint: your browser may cache your authentication credentials, so try opening the page in a private browsing session if you want to try logging in multiple times.&lt;/em&gt;
-  &lt;/p&gt;
-    &lt;h1 id="macaroons"&gt;Flow-safe Decentralized Authorization with Macaroons&lt;/h1&gt;
-      &lt;p&gt;&lt;a href="https://research.google.com/pubs/pub41892.html"&gt;Macaroons&lt;/a&gt; are authentication tokens like cookies, but may contain more sophisticated 
-         &lt;em&gt;caveats&lt;/em&gt; that constrain the authority of the token to access resources or perform actions. 
-      &lt;/p&gt;
-      &lt;p&gt;
+&lt;/pre&gt;
+Then, browse to <a href="http://localhost:8080"><tt>http://localhost:8080</tt></a>. You can use username “alice” and password “12345” to log in.
+<em>Hint: your browser may cache your authentication credentials, so try opening the page in a private browsing session if you want to try logging in multiple times.</em>
+</p>
+<h1 id="macaroons">Flow-safe Decentralized Authorization with Macaroons</h1>
+<p><a href="https://research.google.com/pubs/pub41892.html">Macaroons</a> are authentication tokens like cookies, but may contain more sophisticated 
+     <em>caveats</em> that constrain the authority of the token to access resources or perform actions. 
+</p>
+<p>
   Instructions:
-</code></pre></div></div>
-<pre>
+&lt;pre&gt;
   &gt; git clone https://bitbucket.org/decenters/flame-examples
   &gt; cd flame-examples/memodb-macaroons
   &gt; stack build :memodb-macaroons
   &gt; stack exec memodb-macaroons
-  alice's macaroon:MDAxM2xvY2F0...
-</pre>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Then, from the command line, use curl to interact with the REST api:
-</code></pre></div></div>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  alice’s macaroon:MDAxM2xvY2F0…
+&lt;/pre&gt;
+	  Then, from the command line, use curl to interact with the REST api:
+&lt;pre style="white-space:pre-wrap; word-wrap:break-word;"&gt;
   &gt; curl http://localhost:8080/memos
   Missing auth header
-  &gt; curl -H "servant-auth-macaroon:MDAxM2xvY2F0..." \
-         -H "Content-type: application/json" \
-         -d '{"memo":"Flame rocks!" }' http://localhost:8080/memos
-  &gt; curl -H "servant-auth-macaroon:MDAxM2xvY2F0..." http://localhost:8080/memos
-  [{"createdAt":"2017-09-14T19:24:17.720088Z","text":"Flame rocks!","id":1}]
-</pre>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;/p&gt;
+  &gt; curl -H “servant-auth-macaroon:MDAxM2xvY2F0…” \
+         -H “Content-type: application/json” \
+         -d ‘{“memo”:”Flame rocks!” }’ http://localhost:8080/memos
+  &gt; curl -H “servant-auth-macaroon:MDAxM2xvY2F0…” http://localhost:8080/memos
+  [{“createdAt”:”2017-09-14T19:24:17.720088Z”,”text”:”Flame rocks!”,”id”:1}]
+&lt;/pre&gt;
+</p>
 
-    &lt;/div&gt; &lt;!-- intro --&gt;
-  &lt;/div&gt;
-</code></pre></div></div>
-<p>&lt;/div&gt;
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-32820411-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());</script></p>
-
-<p>gtag(‘config’, ‘UA-32820411-2’);
-&lt;/script&gt;
-  &lt;/body&gt;
+<p>&lt;/div&gt; <!-- intro -->
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
 &lt;/html&gt;</p>
 
 </div>
