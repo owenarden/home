@@ -504,7 +504,6 @@ References
 	booktitle       = {2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},
 	year            = {2021},
 	month           = {may},
-	address         = {New York, NY, USA},
 	doi             = {10.1109/ICBC51069.2021.9461081},
 	series          = {ICBC'21 (short paper)},
         file = "eclipse.pdf",
@@ -714,7 +713,6 @@ References
         file = "icbc22.pdf",
 	year            = {2022},
 	month           = {may},
-	address         = {New York, NY, USA},
 }
 
 @INPROCEEDINGS{flaqr,
@@ -774,9 +772,37 @@ References
                            validate our approach, we implement Phoenix as an extension of the BFT-SMaRT
                            library.},
 	series          = {ICBC'23},
-        %doi             = {10.1109/ICBC54727.2022.9805547},
-        file = "Phoenix.pdf",
+    doi             = {10.1109/ICBC56567.2023.10174886},
+    file = "Phoenix.pdf",
 	year            = {2023},
 	month           = {may},
-	address         = {New York, NY, USA},
+}
+
+@inproceedings{decentagram,
+	author          = {Haofan Zheng and Tuan Tran and Roy Shadmon and Owen Arden},
+	title           = {Decentagram: Highly-Available Decentralized Publish/Subscribe Systems},
+	booktitle       = {2024 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},
+    blurb           = {A secure, decentralized pub/sub system for on-chain and off-chain subscribers 
+                        using smart contracts and trusted execution environments.},
+    awards = {Distinguished artifact award},
+	abstract        = { This paper presents Decentagram, a decentralized framework for data
+                        dissemination using the publish/subscribe messaging model. Decentagram uses
+                        blockchain smart contracts to authenticate events that will be published
+                        using digital signatures or self-attestation certificates from code running
+                        in trusted execution environments (TEEs), both of which are verified
+                        onchain. This approach permits any host with valid credentials to publish
+                        verified updates, increasing decentralization and availability of the system
+                        as a whole by simplifying compensation and incentivization, even for
+                        untrusted hosts running TEEs.  Decentagram also supports on-chain
+                        subscribers where thirdparty contracts receive events immediately: within
+                        the same transaction as the published event. The same event will also be
+                        delivered to off-chain subscribing applications through an offchain event
+                        broker. We provide an open-source implementation of Decentagram, and
+                        evaluate the gas cost of its on-chain components and the end-to-end latency
+                        of its off-chain component.},
+	series          = {DSN'24},
+    %doi             = {TBD},
+    file = "decentagram.pdf",
+	year            = {2024},
+	month           = {},
 }
