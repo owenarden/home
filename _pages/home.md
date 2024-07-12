@@ -41,4 +41,4 @@ Application developers should be domain experts, not security experts. I study l
 {% endif %}
 
 ### Recent publications
-{% bibliography --query @article[year >= 2017] or @inproceedings[year >= 2017] or @techreport[year >= 2017]%}
+{% bibliography --query @article[year >= 2021] or @inproceedings[year >= 2021] or @techreport[year >= 2021]%}

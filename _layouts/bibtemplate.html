@@ -78,12 +78,17 @@ Ph.D. Dissertation
 {% endif %}
 
 <div id="a{{entry.key}}" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex | remove:"file = entry.file"}}</pre>
+<pre>{{ entry.bibtex | remove_pre:'%' 
+     }}</pre>
 </div>
 
 <div id="b{{entry.key}}" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
 <p>{{entry.abstract}}</p>
 </div>
+
+{% if entry.talkurl %}
+<a href="{{ entry.url }}" target="_blank"><button class="btn btn-success btm-sm">VIDEO</button></a>
+{% endif %}
 
 <script>
 function toggleBibtex{{entry.key}}(parameter) {
