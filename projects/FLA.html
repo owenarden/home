@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flow-limited authorization - Owen Arden</title>
+  <meta name="description" content="Owen Arden's Academic Home Page">
+  <link rel="stylesheet" href="https://owenarden.github.io/home/assets/main.css" }}">
+  <link rel="canonical" href="https://owenarden.github.io/home/projects/FLA">
+  <!-- <link rel="shortcut icon" type ="image/x-icon" href="https://owenarden.github.io/home/favicon.ico"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+<!-- End Google Tag Manager -->
+
+
+
+</head>
+
+
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> -->
+    <a class="navbar-brand" href="https://owenarden.github.io/home/">
+     <!-- <img src="https://owenarden.github.io/home/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt=""> -->
+      Owen Arden
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="https://owenarden.github.io/home/">Home</a>
+          </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io/home/about">About</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io/home/publications">Publications</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://owenarden.github.io/home/teaching">Teaching</a>
+           </li> 
+          
+        </ul>
+  </div>
+</nav>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="gridid" class="col-sm-12 col-xs-12">
+  <p><img src="/home/images/flame-small.png" alt="Flame logo" />&gt;</p>
+<h1 id="flow-limited-authorization">Flow-limited authorization</h1>
+<h2 id="software">Software</h2>
+<h3 id="flame-flow-limited-authorization-for-haskell">Flame: Flow-Limited Authorization for Haskell</h3>
+<p>Flame is a library and plugin for <a href="https://www.haskell.org/ghc/">GHC</a>
+that enforces information security
+policies in Haskell programs.  In Flame, sensitive
+information is protected by monad-like types that specify
+how information may flow according to the Flow-Limited Authorization Model. The operations of these
+Flame monads implement the type system constraints of the
+Flow-Limited Authorization Calculus (FLAC).</p>
+
+<h4 id="code-and-demos">Code and demos</h4>
+
+<p>All code for Flame is <a href="https://bitbucket.org/account/user/decenters/projects/FLAME">publically available</a>
+We have also built some <a href="/home/projects/FLA/flame/examples">examples</a>.</p>
+
+<h2 id="research">Research</h2>
+<ol class="bibliography" reversed="reversed"><li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>Applying consensus and replication securely with FLAQR</h5>
+
+<h6>A formal language for building application-level consensus and replication protocols 
+         that are secure by construction.</h6>
+
+<h6>
+
+CSF’22
+
+&nbsp;&nbsp;<b><em>Distinguished paper award</em></b>
+</h6>
+Mondal, Priyanka and Algehed, Maximilian and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/flaqr.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF54842.2022.9919637" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexflaqr()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflaqr()">ABSTRACT</button>
+
+
+<div id="aflaqr" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{flaqr,
+  author = {Mondal, Priyanka and Algehed, Maximilian and Arden, Owen},
+  booktitle = {35\textsuperscript{th} {IEEE} Computer Security Foundations Symp. (CSF)},
+  title = {Applying consensus and replication securely with FLAQR},
+  series = {CSF'22},
+  year = {2022},
+  month = aug,
+  doi = {10.1109/CSF54842.2022.9919637},
+  volume = {},
+  number = {},
+  keywords = {fla},
+  month_numeric = {8}
+}
+</pre>
+</div>
+
+<div id="bflaqr" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Availability is crucial to the security of distributed systems, but
+            guaranteeing availability is hard, especially when participants in the system
+            may act maliciously. Quorum replication protocols provide both integrity and
+            availability: data and computation is replicated at multiple independent hosts,
+            and a quorum of these hosts must agree on the output of all operations applied
+            to the data. Unfortunately, these protocols have high overhead and can be
+            difﬁcult to calibrate for a speciﬁc application’s needs. Ideally, developers
+            could use high-level abstractions for consensus and replication to write
+            fault-tolerant code by that is secure by construction.
+%            
+            This paper presents Flow-Limited Authorization for Quorum Replication (FLAQR),
+            a core calculus for building distributed applications with heterogeneous quorum
+            replication protocols while enforcing end-to-end information security. Our type
+            system ensures that well-typed FLAQR programs cannot fail (experience an
+            unrecoverable error) in ways that violate their typelevel speciﬁcations. We
+            present noninterference theorems that characterize FLAQR’s conﬁdentiality,
+            integrity, and availability in the presence of consensus, replication, and
+            failures, as well as a liveness theorem for the class of majority quorum
+            protocols under a bounded number of faults.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexflaqr(parameter) {
+    var x= document.getElementById('aflaqr');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractflaqr(parameter) {
+    var x= document.getElementById('bflaqr');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>A Calculus for Flow-Limited Authorization: Expanded Technical Report</h5>
+
+<h6>A core programming model that uses flow-limited authorization to provide end-to-end 
+	information security to dynamic authorization mechanisms and programs that use them.</h6>
+
+<h6>
+
+
+Technical Report
+
+
+
+&nbsp;&nbsp;<b><em>Revised, corrected, and expanded version of CSF’16 paper</em></b>
+</h6>
+<b>Arden, Owen</b> and Gollamudi, Anitha and Cecchetti, Ethan and Chong, Stephen and Myers, Andrew C
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/jflactr.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.48550/arXiv.2104.10379" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexjflac()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractjflac()">ABSTRACT</button>
+
+
+<div id="ajflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@techreport{jflac,
+  title = {A Calculus for Flow-Limited Authorization: Expanded Technical Report},
+  author = {Arden, Owen and Gollamudi, Anitha and Cecchetti, Ethan and Chong, Stephen and Myers, Andrew C},
+  journal = {arXiv preprint arXiv:2104.10379},
+  doi = {10.48550/arXiv.2104.10379},
+  year = {2021},
+  keywords = {fla}
+}
+</pre>
+</div>
+
+<div id="bjflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Real-world applications routinely make authorization decisions
+              based on dynamic computation. Reasoning about dynamically computed authority is
+              challenging. Integrity of the system might be compromised if attackers can
+              improperly influence the authorizing computation. Confidentiality can also be
+              compromised by authorization, since authorization decisions are often based on
+              sensitive data such as membership lists and passwords. Previous formal models
+              for authorization do not fully address the security implications of permitting
+              trust relationships to change, which limits their ability to reason about
+              authority that derives from dynamic computation. Our goal is an approach to
+              constructing dynamic authorization mechanisms that do not violate
+              confidentiality or integrity.  The Flow-Limited Authorization Calculus (FLAC)
+              is a simple, expressive model for reasoning about dynamic authorization as well
+              as an information flow control language for securely implementing various
+              authorization mechanisms. FLAC combines the insights of two previous models: it
+              extends the Dependency Core Calculus with features made possible by the
+              Flow-Limited Authorization Model. FLAC provides strong end-to-end information
+              security guarantees even for programs that incorporate and implement rich
+              dynamic authorization mechanisms. These guarantees include noninterference and
+              robust declassification, which prevent attackers from influencing information
+              disclosures in unauthorized ways. We prove these security properties formally
+              for all FLAC programs and explore the expressiveness of FLAC with several
+              examples.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexjflac(parameter) {
+    var x= document.getElementById('ajflac');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractjflac(parameter) {
+    var x= document.getElementById('bjflac');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>First-Order Logic for Flow-Limited Authorization</h5>
+
+<h6>A logic for reasoning about authorization decisions in the presence of information-flow policies.</h6>
+
+<h6>
+
+CSF’20
+
+
+</h6>
+Hirsch, Andrew K. and Azevedo de Amorim, Pedro Henrique and Cecchetti, Ethan and Tate, Ross and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/flafol.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF49147.2020.00017" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexflafol()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflafol()">ABSTRACT</button>
+
+
+<div id="aflafol" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{flafol,
+  author = {{Hirsch, Andrew K.} and {Azevedo de Amorim, Pedro Henrique} and {Cecchetti, Ethan} and {Tate, Ross} and {Arden, Owen}},
+  booktitle = {33\textsuperscript{rd} {IEEE} Computer Security Foundations Symp. (CSF)},
+  title = {First-Order Logic for Flow-Limited Authorization},
+  year = {2020},
+  volume = {},
+  number = {},
+  pages = {123-138},
+  doi = {10.1109/CSF49147.2020.00017},
+  series = {CSF'20},
+  keywords = {fla}
+}
+</pre>
+</div>
+
+<div id="bflafol" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>We present the Flow-Limited Authorization First-Order Logic
+                    (FLAFOL), a logic for reasoning about authorization decisions in the presence
+                    of information-ﬂow policies. We formalize the FLAFOL proof system, characterize
+                    its proof-theoretic properties, and develop its security guarantees. In
+                    particular, FLAFOL is the ﬁrst logic to provide a non-interference guarantee
+                    while supporting all connectives of ﬁrst-order logic. Furthermore, this
+                    guarantee is the ﬁrst to combine the notions of noninterference from both
+                    authorization logic and information-ﬂow systems. All the theorems in this paper
+                    are proven in Coq.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexflafol(parameter) {
+    var x= document.getElementById('aflafol');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractflafol(parameter) {
+    var x= document.getElementById('bflafol');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>Information flow control for distributed trusted execution environments</h5>
+
+<h6>DFLATE offers high-level security abstractions that reflect both the guarantees 
+		and limitations of the TEE security mechanisms.</h6>
+
+<h6>
+
+CSF’19
+
+
+</h6>
+Gollamudi, Anitha and Chong, Stephen and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/dflate.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF.2019.00028" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexdflate()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractdflate()">ABSTRACT</button>
+
+
+<div id="adflate" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{dflate,
+  title = {Information flow control for distributed trusted execution environments},
+  author = {Gollamudi, Anitha and Chong, Stephen and Arden, Owen},
+  year = {2019},
+  booktitle = {32\textsuperscript{nd} {IEEE} Computer Security Foundations Symp. (CSF)},
+  month = jun,
+  series = {CSF'19},
+  doi = {10.1109/CSF.2019.00028},
+  keywords = {fla},
+  month_numeric = {6}
+}
+</pre>
+</div>
+
+<div id="bdflate" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Distributed applications cannot assume that their security
+              policies will be enforced on untrusted hosts. Trusted execution environments
+              (TEEs) combined with cryptographic mechanisms enable execution of known code on
+              an untrusted host and the exchange of conﬁdential and authenticated messages
+              with it. TEEs do not, however, establish the trustworthiness of code executing
+              in a TEE. Thus, developing secure applications using TEEs requires specialized
+              expertise and careful auditing.
+              
+              This paper presents DFLATE, a core security calculus for distributed
+              applications with TEEs. DFLATE offers high-level abstractions that reﬂect both
+              the guarantees and limitations of the underlying security mechanisms they are
+              based on. The accuracy of these abstractions is exhibited by asymmetry between
+              conﬁdentiality and integrity in our formal results: DFLATE enforces a strong
+              form of noninterference for conﬁdentiality, but only a weak form for integrity.
+              This reﬂects the asymmetry of the security guarantees of a TEE: a malicious
+              host cannot access secrets in the TEE or modify its contents, but they can
+              suppress or manipulate the sequence of its inputs and outputs. Therefore DFLATE
+              cannot protect against the suppression of high-integrity messages, but when
+              these messages are delivered, their contents cannot have been inﬂuenced by an
+              attacker.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexdflate(parameter) {
+    var x= document.getElementById('adflate');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractdflate(parameter) {
+    var x= document.getElementById('bdflate');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>Nonmalleable Information Flow Control</h5>
+
+<h6>A new 4-safety hyperproperty for secure declassification and endorsement and a 
+             type system for enforcing it.</h6>
+
+<h6>
+
+CCS’17
+
+&nbsp;&nbsp;<b><em>Best paper ﬁnalist (11 ﬁnalists out of 151 accepted papers).</em></b>
+</h6>
+Cecchetti, Ethan and Myers, Andrew C. and <b>Arden, Owen</b>
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/nmifc_ccs17.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1145/3133956.3134054" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexnmifc()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractnmifc()">ABSTRACT</button>
+
+
+<div id="anmifc" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{nmifc,
+  author = {Cecchetti, Ethan and Myers, Andrew C. and Arden, Owen},
+  title = {Nonmalleable Information Flow Control},
+  booktitle = {24\textsuperscript{th} ACM Conf.~on Computer and Communications Security (CCS)},
+  year = {2017},
+  month = oct,
+  pages = {1875--1891},
+  location = {Dallas, TX},
+  series = {CCS'17},
+  doi = {10.1145/3133956.3134054},
+  keywords = {fla},
+  month_numeric = {10}
+}
+</pre>
+</div>
+
+<div id="bnmifc" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Noninterference is a popular semantic security condition
+                because it offers strong end-to-end guarantees, it is inherently compositional,
+                and it can be enforced using a simple security type system. Unfortunately, it
+                is too restrictive for real systems. Mechanisms for downgrading information are
+                needed to capture real-world security requirements, but downgrading eliminates
+                the strong compositional security guarantees of noninterference.
+                
+                We introduce nonmalleable information flow, a new formal security condition
+                that generalizes noninterference to permit controlled downgrading of both
+                confidentiality and integrity. While previous work on robust declassification
+                prevents adversaries from exploiting the downgrading of confidentiality, our
+                key insight is transparent endorsement, a mechanism for downgrading integrity
+                while defending against adversarial exploitation. Robust declassification
+                appeared to break the duality of confidentiality and integrity by making
+                confidentiality depend on integrity, but transparent endorsement makes
+                integrity depend on confidentiality, restoring this duality. We show how to
+                extend a security-typed programming language with transparent endorsement and
+                prove that this static type system enforces nonmalleable information flow, a
+                new security property that subsumes robust declassification and transparent
+                endorsement. Finally, we describe an implementation of this type system in the
+                context of Flame, a flow-limited authorization plugin for the Glasgow Haskell
+                Compiler.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexnmifc(parameter) {
+    var x= document.getElementById('anmifc');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractnmifc(parameter) {
+    var x= document.getElementById('bnmifc');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>A Calculus for Flow-Limited Authorization</h5>
+
+<h6>A core programming model that uses flow-limited authorization to provide end-to-end information security to dynamic authorization mechanisms and programs that use them.</h6>
+
+<h6>
+
+CSF’16
+
+
+</h6>
+<b>Arden, Owen</b> and Myers, Andrew C.
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/flac_csf16.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF.2016.17" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexflac()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflac()">ABSTRACT</button>
+
+
+<div id="aflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{flac,
+  author = {Arden, Owen and Myers, Andrew C.},
+  booktitle = {2016 IEEE 29th Computer Security Foundations Symposium (CSF)},
+  title = {A Calculus for Flow-Limited Authorization},
+  year = {2016},
+  doi = {10.1109/CSF.2016.17},
+  month = jun,
+  series = {CSF'16},
+  keywords = {fla},
+  month_numeric = {6}
+}
+</pre>
+</div>
+
+<div id="bflac" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Real-world applications routinely make authorization decisions
+              based on dynamic computation. Reasoning about dynamically computed authority is
+              challenging. Integrity of the system might be compromised if attackers can
+              improperly influence the authorizing computation. Confidentiality can also be
+              compromised by authorization, since authorization decisions are often based on
+              sensitive data such as membership lists and passwords. Previous formal models
+              for authorization do not fully address the security implications of permitting
+              trust relationships to change, which limits their ability to reason about
+              authority that derives from dynamic computation. Our goal is a way to construct
+              dynamic authorization mechanisms that do not violate confidentiality or
+              integrity. We introduce the Flow-Limited Authorization Calculus (FLAC), which
+              is both a simple, expressive model for reasoning about dynamic authorization
+              and also an information flow control language for securely implementing various
+              authorization mechanisms. FLAC combines the insights of two previous models: it
+              extends the Dependency Core Calculus with features made possible by the
+              Flow-Limited Authorization Model. FLAC provides strong end-to-end information
+              security guarantees even for programs that incorporate and implement rich
+              dynamic authorization mechanisms. These guarantees include noninterference and
+              robust declassification, which prevent attackers from influencing information
+              disclosures in unauthorized ways. We prove these security properties formally
+              for all FLAC programs and explore the expressiveness of FLAC with several
+              examples.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexflac(parameter) {
+    var x= document.getElementById('aflac');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractflac(parameter) {
+    var x= document.getElementById('bflac');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li>
+<li><style>
+.btn{
+    margin-bottom:5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:15px;
+    height:20px:
+}
+pre{
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word; 
+    width:100%; overflow-x:auto;
+}
+</style>
+
+
+<div class="text-justify">
+<h5>Flow-Limited Authorization</h5>
+
+<h6>
+
+CSF’15
+
+
+</h6>
+<b>Arden, Owen</b> and Liu, Jed and Myers, Andrew C.
+</div>
+
+
+
+
+
+<a href="https://owenarden.github.io/home/papers/flam_csf15.pdf" target="_blank"><button class="btn btn-primary btm-sm">PDF</button></a>
+
+
+
+
+<a href="http://doi.org/10.1109/CSF.2015.42" target="_blank"><button class="btn btn-success btm-sm">DOI</button></a>
+
+
+
+
+<button class="btn btn-danger btm-sm" onclick="toggleBibtexflam()">BIB</button>
+
+
+
+<button class="btn btn-warning btm-sm" onclick="toggleAbstractflam()">ABSTRACT</button>
+
+
+<div id="aflam" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<pre>@inproceedings{flam,
+  author = {Arden, Owen and Liu, Jed and Myers, Andrew C.},
+  booktitle = {2015 IEEE 28th Computer Security Foundations Symposium},
+  title = {Flow-Limited Authorization},
+  year = {2015},
+  volume = {},
+  number = {},
+  pages = {569-583},
+  doi = {10.1109/CSF.2015.42},
+  month = jul,
+  series = {CSF'15},
+  keywords = {fla},
+  month_numeric = {7}
+}
+</pre>
+</div>
+
+<div id="bflam" style="display: none; border-radius:5px; padding:10px; margin-bottom:20px;">
+<p>Because information flow control mechanisms often rely on an
+              underlying authorization mechanism, their security guarantees can be subverted
+              by weaknesses in authorization. Conversely, the security of authorization can
+              be subverted by information flows that leak information or that influence how
+              authority is delegated between principals. We argue that interactions between
+              information flow and authorization create security vulnerabilities that have
+              not been fully identified or addressed in prior work. We explore how the
+              security of decentralized information flow control (DIFC) is affected by three
+              aspects of its underlying authorization mechanism: first, delegation of
+              authority between principals, second, revocation of previously delegated
+              authority, third, information flows created by the authorization mechanisms
+              themselves. It is no surprise that revocation poses challenges, but we show
+              that even delegation is problematic because it enables unauthorized
+              downgrading. Our solution is a new security model, the Flow-Limited
+              Authorization Model (FLAM), which offers a new, integrated approach to
+              authorization and information flow control. FLAM ensures robust authorization,
+              a novel security condition for authorization queries that ensures attackers
+              cannot influence authorization decisions or learn confidential trust
+              relationships. We discuss our prototype implementation and its algorithm for
+              proof search.</p>
+</div>
+
+
+
+<script>
+function toggleBibtexflam(parameter) {
+    var x= document.getElementById('aflam');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function toggleAbstractflam(parameter) {
+    var x= document.getElementById('bflam');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</li></ol>
+
+
+</div>
+
+      </div>
+    </div>
+
+    <br/>
+<section id="footer">
+<div class="container-footer">
+  <div class="panel-footer">
+	  <div class="row">
+		<div class="col-sm-4">
+		    <h5>About</h5>	
+            <p>Prof. Owen Arden<br/> Associate Professor<br/> <a href="https://engineering.ucsc.edu/departments/computer-science-and-engineering" target="_blank">Computer Science and Engineering</a><br/> UC Santa Cruz
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Contact</h5>	
+            <p><a href="mailto:owen@soe.ucsc.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Owen via email</a> <br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Coordinates</h5>	
+            <p><a href="https://engineering.ucsc.edu/about/locations/baskin-engineering-building" target="_blank">Engineering 2</a><br/> UC Santa Cruz<br/> MS: SOE3<br/> 1156 High Street<br/> Santa Cruz, CA 95062
+</p>
+		</div>
+	  </div>
+
+      <center><p>&copy 2024 Owen Arden </p></center>
+	</div>
+  </div>
+</div>
+
+<script src="/home/assets/javascript/bootstrap/jquery.min.js"></script>
+<!-- <script src="/home/assets/javascript/popper/dist/umd/popper.min.js"></script> -->
+<script src="/home/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<!-- <script src="/home/assets/javascript/shb.js"></script> -->
+
+
+
+  </body>
+
+</html>
