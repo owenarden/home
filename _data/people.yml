@@ -8,6 +8,7 @@
   status: current
   url: "https://users.soe.ucsc.edu/~pmondal/index.html"
   role: advisor
+  now_at: "Snap Inc."
 - name: Roy Shadmon
   degree: Ph.D.
   status: current
@@ -24,8 +25,10 @@
   url: "http://apmctaggart.net/"
   role: advisor
   job: "<a href='https://redhat.com'>RedHat</a>"
+  now_at: "Red Hat"
 - name: Vaishnavi Sundararajan
   degree: postdoc
   status: former
   url: "http://vaishs.github.io/"
   role: advisor
+  now_at: "IIT Delhi"

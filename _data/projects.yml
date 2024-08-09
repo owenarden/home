@@ -8,7 +8,8 @@
 - title: Decent
   blurb: Enforcing decentralized confidentiality, integrity, and availability by combining trusted execution environments and smart contracts.
   status: active
-  url: https://github.com/lsd-ucsc/decent-framework
+  url: /home/projects/decent
+#  url: https://github.com/lsd-ucsc/decent-framework
 - title: FlowFrame
   blurb: Practical static information flow control for Scala Spark applications.
   status: completed
