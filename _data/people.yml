@@ -15,7 +15,7 @@
   role: advisor
 - name: Tuan Tran
   degree: Ph.D.
-  status: current
+  status: former
   url: "https://users.soe.ucsc.edu/~atran18/"
   role: "co-advised with <a href='https://people.ucsc.edu/~palvaro/'>Peter Alvaro</a>"
 - name: Ana McTaggart
@@ -26,6 +26,6 @@
   job: "<a href='https://redhat.com'>RedHat</a>"
 - name: Vaishnavi Sundararajan
   degree: postdoc
-  status: current
+  status: former
   url: "http://vaishs.github.io/"
   role: advisor

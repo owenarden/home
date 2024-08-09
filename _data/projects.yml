@@ -1,26 +1,27 @@
 - title: Flow-limited authorization
-  blurb: An expressive new security model that unifies authorization and information flow control.
+  blurb: An expressive new security model that unifies authorization and information flow control for stronger semantic security.
+  url: /home/projects/FLA
   status: active
-- title: Proximal Consensus
-  blurb: Responsive, fault-tolerant data pipelines at the edge.
+- title: Proximal Byzantine Agreement
+  blurb: Using Bayesian statistics to improve security guarantees in distributed sensor networks.
   status: active
 - title: Decent
-  blurb: Secure decentralized applications with Trusted Execution Environments.
+  blurb: Enforcing decentralized confidentiality, integrity, and availability by combining trusted execution environments and smart contracts.
   status: active
   url: https://github.com/lsd-ucsc/decent-framework
 - title: FlowFrame
   blurb: Practical static information flow control for Scala Spark applications.
-  status: active
+  status: completed
   url: https://github.com/owenarden/flowframe
-- title: Flame
-  blurb: Flow-limited authorization for Haskell
-  status: active
-  url: /home/projects/flame
+#- title: Flame
+#  blurb: Flow-limited authorization for Haskell
+#  status: active
+#  url: /home/projects/flame
 - title: Phoenix
   blurb: Resilient consensus protocols using re-configuration.
-  status: active
+  status: completed
 - title: Fabric
-  blurb: A language and runtime for enforcing information flow control in federated applications.
+  blurb: A language and runtime for decentralized information flow control in federated applications.
   status: completed
   url: https://www.cs.cornell.edu/projects/fabric/
 - title: Jif

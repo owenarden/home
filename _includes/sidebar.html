@@ -27,6 +27,16 @@
 </div>
 
 <div class="jumbotron">
+  <h4> Alumni </h4>
+  {% assign phds = site.data.people | where:"status", "former" | sort:"name" %}
+  {% for student in phds %}
+   <p> <a href="{{ student.url }}">{{ student.name }}</a>
+      ({{ student.degree }}{% if student.role contains 'co-advised' %}, {{ student.role }}{% endif %})
+   </p>
+  {% endfor %}
+</div>
+
+<div class="jumbotron">
   <h4>Current Projects</h4>
   {% assign active = site.data.projects | where:"status","active" | sort:"title" %}
   {% for project in active %}

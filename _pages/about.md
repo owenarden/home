@@ -75,6 +75,17 @@ permalink: /about/
   <li> {{ member.education7 | replace: "-","&#8211;"}} </li>
   <li> {{ member.education8 | replace: "-","&#8211;"}} </li>
   {% endif %}
+  {% if member.number_educ == 9 %}
+  <li> {{ member.education1 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education2 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education3 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education4 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education5 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education6 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education7 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education8 | replace: "-","&#8211;"}} </li>
+  <li> {{ member.education9 | replace: "-","&#8211;"}} </li>
+  {% endif %}
   </ul>
 </div>
 </div>
