@@ -7,6 +7,19 @@ permalink: /teaching/
 
 {% if site.data.people %}
 ## Teaching
+<div class="jumbotron">
+### Courses
+<ul>
+{% assign courses = site.data.courses %}
+{% for course in courses %}
+ <li> {{course.dept}} {{course.number}}: {{ course.name }}&nbsp;
+      {% for offered in course.offerings %}
+        <a href="{{ offered.url }}">{{ offered.quarter }} {{ offered.year }}</a>&nbsp;
+      {% endfor %}
+ </li>
+{% endfor %}
+</ul>
+</div>
 
 <div class="jumbotron">
 ### Current PhD students
@@ -34,21 +47,10 @@ permalink: /teaching/
 </div>
 {% endif %}
 
-<div class="jumbotron">
-### Courses
-<ul>
-{% assign courses = site.data.courses %}
-{% for course in courses %}
- <li> {{course.dept}} {{course.number}}: {{ course.name }}&nbsp;
-      {% for offered in course.offerings %}
-        <a href="{{ offered.url }}">{{ offered.quarter }} {{ offered.year }}</a>&nbsp;
-      {% endfor %}
- </li>
-{% endfor %}
-</ul>
-</div>
+
 <div class="jumbotron">
 ### Alumni
+
 <ul>
 {% assign alumni = site.data.people | where_exp:"student", "student.role contains 'advisor'" | where_exp:"student", "student.degree == 'Ph.D.' or student.degree == 'M.S.'" | where:"status", "former" | sort:"name" %}
 {% assign phds = site.data.people |  where:"status", "current" | sort:"name" %}

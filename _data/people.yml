@@ -1,14 +1,15 @@
 - name: Haofan Zheng
   degree: Ph.D. 
   url: "https://haofanzheng.com/"
-  status: current
+  status: former
   role: advisor
+  now_at: <a href="https://www.tiktok.com/">TikTok</a>
 - name: Priyanka Mondal
   degree: Ph.D.
-  status: current
+  status: former
   url: "https://users.soe.ucsc.edu/~pmondal/index.html"
   role: advisor
-  now_at: "Snap Inc."
+  now_at: <a href="https://www.snap.com/">Snap Inc.</a>
 - name: Roy Shadmon
   degree: Ph.D.
   status: current
@@ -19,16 +20,16 @@
   status: former
   url: "https://users.soe.ucsc.edu/~atran18/"
   role: "co-advised with <a href='https://people.ucsc.edu/~palvaro/'>Peter Alvaro</a>"
+  now_at: <a href="https://www.nutanix.com/">Nutanix</a>
 - name: Ana McTaggart
   degree: M.S.
   status: former
   url: "http://apmctaggart.net/"
   role: advisor
-  job: "<a href='https://redhat.com'>RedHat</a>"
-  now_at: "Red Hat"
+  now_at: "<a href='https://redhat.com'>RedHat</a>"
 - name: Vaishnavi Sundararajan
   degree: postdoc
   status: former
   url: "http://vaishs.github.io/"
   role: advisor
-  now_at: "IIT Delhi"
+  now_at: <a href="https://www.cse.iitd.ernet.in/">IIT Delhi</a>

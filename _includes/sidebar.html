@@ -8,7 +8,6 @@
    {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-3x"></i></a> {% endif %}
    {% if member.cv %} <a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a> {% endif %}
    {% if member.scholar %} <a href="{{ member.scholar }}" target="_blank"><i class="ai ai-google-scholar-square ai-3x"></i></a> {% endif %}
-   {% if member.twitter %} <a href="{{ member.twitter}}" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a> {% endif %}
   </div>
   </center>
 {% endfor %}
@@ -27,11 +26,12 @@
 </div>
 
 <div class="jumbotron">
-  <h4> Alumni </h4>
+  <h4> Alumni</h4>
   {% assign phds = site.data.people | where:"status", "former" | sort:"name" %}
   {% for student in phds %}
    <p> <a href="{{ student.url }}">{{ student.name }}</a>
       ({{ student.degree }}{% if student.role contains 'co-advised' %}, {{ student.role }}{% endif %})
+      {% if student.now_at %} now at {{ student.now_at }}{% endif %}
    </p>
   {% endfor %}
 </div>
