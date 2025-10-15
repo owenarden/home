@@ -1,0 +1,84 @@
+- name: Conference on Programming Language Design and Implementation (PLDI)
+  url: "https://www.sigplan.org/Conferences/PLDI/"
+  years: 
+    - year: 2024
+      role: pc
+    - year: 2016
+      role: erc
+    
+- name: Object-oriented Programming, Systems, Languages, and Applications (OOPSLA)
+  url: "https://www.sigplan.org/Conferences/OOPSLA/"
+  years: 
+    - year: 2024
+      role: aec,erc
+
+- name: Workshop on Foundations of Computer Security (FCS) @ CSF
+  url: "https://fcs-workshop.github.io/fcs2024/"
+  years: 
+    - year: 2017
+      role: pc
+    - year: 2018
+      role: pc
+    - year: 2019
+      role: pc
+    - year: 2020
+      role: pc-chair
+    - year: 2021
+      role: pc-chair
+
+- name: Computer Security Foundations Symposium
+  url: "https://www.ieee-security.org/CSFWweb/index.html"
+  years:
+    - year: 2018
+      role: pc
+    - year: 2021
+      role: pc
+    - year: 2022
+      role: pc
+    - year: 2023
+      role: pc
+    - year: 2025
+      role: pc,general-chair
+
+- name: Workshop on Programming Languages and Analysis for Security (PLAS), @ CCS
+  years:
+    - year: 2018
+      role: pc
+    - year: 2020
+      role: pc
+    - year: 2021
+      role: pc
+
+- name: Conference on Principles of Security and Trust (POST)
+  years:
+    - year: 2019
+      role: pc
+
+- name: Workshop on Programming Languages and Operating Systems (PLOS), @ SOSP 
+  years:
+    - year: 2019
+      role: pc
+
+- name: Conference on Computer and Communications Security (CCS) 
+  years:
+    - year: 2019
+      role: pc
+    - year: 2022
+      role: pc
+    - year: 2023
+      role: pc
+
+- name: Workshop on Principles of Secure Compilation (PriSC), @ POPL
+  years:
+    - year: 2022
+      role: pc
+
+- name: USENIX Annual Technical Conference (ATC)
+  years:
+    - year: 2018
+      role: erc
+
+- name: Conference on Architectural Support for Programming Languages and Operating Systems
+  years: 
+    - year: 2025
+      role: pc

@@ -1,4 +1,6 @@
 <div>
+{% for member in site.data.contactfaqs %}
+{% endfor %}
 {% for member in site.data.pi %}
 <div class="jumbotron">
    <center>
@@ -9,6 +11,7 @@
    {% if member.cv %} <a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a> {% endif %}
    {% if member.scholar %} <a href="{{ member.scholar }}" target="_blank"><i class="ai ai-google-scholar-square ai-3x"></i></a> {% endif %}
   </div>
+  <a href="{{site.url}}{{site.baseurl}}/contactfaqs/">Contact FAQs</a>
   </center>
 {% endfor %}
 </div>
