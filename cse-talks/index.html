@@ -83,11 +83,18 @@
     const API_BASE = "https://events.ucsc.edu/wp-json/tribe/events/v1";
     const CSE_ORGANIZER_ID = "409";
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const state = {
+        search: urlParams.get('search') || "",
+        organizer: urlParams.get('organizer') || CSE_ORGANIZER_ID,
+    };
+
     function getFilteredIcsPath() {
         const search = document.getElementById('search').value;
         const url = "events.ucsc.edu/events/";
         const params = new URLSearchParams({ ical: "1", organizer: CSE_ORGANIZER_ID });
         if (search) params.append('tribe-bar-search', search);
+        // params.append('name', "CSE Talks"); // doesn't seem to work
         return `${url}?${params.toString()}`;
     }
 
@@ -127,12 +134,16 @@
                     ` : ''}
                 </div>
             `).join('');
+            const displayParams = new URLSearchParams(params);
+            // displayParams.delete('organizer');
+            window.history.replaceState({}, '', `${window.location.pathname}?${displayParams.toString()}`);
         } catch (error) {
             console.error("Error loading events:", error);
         }
     }
 
     document.getElementById('filter-form').onsubmit = (e) => { e.preventDefault(); loadEvents(); };
+    document.getElementById('search').value = state.search;
     loadEvents();
 </script>
 </body>
